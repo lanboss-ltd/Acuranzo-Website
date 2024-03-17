@@ -1,0 +1,34 @@
+﻿{
+   "short_name":"Acuranzo",
+   "name":"Acuranzo",
+   "description":"",
+   "start_url":"Acuranzo.html",
+   "display":"fullscreen",
+   "theme_color":"#FFFFFF",
+   "background_color":"#FFFFFF",
+   "related_applications": [{
+     "platform": "webapp",
+     "url": "Acuranzo.html/manifest.json"
+    }],
+   "icons":
+   [
+    {
+      "src": "IconResLow.png",
+      "type": "image/png",
+      "sizes": "64x64",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "IconResMid.png",
+      "type": "image/png",
+      "sizes": "256x256",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "IconResHigh.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+   ]
+}
