@@ -47,7 +47,7 @@ jobs:
     - run: cat xx02 >> README.md
     
     # Cleanup temp files
-    - run: rm cloc-txt
+    - run: rm cloc.txt
     - run: rm cloc-ignored.txt
     - run: rm xx00
     - run: rm xx01
