@@ -1,4 +1,4 @@
-name: Count Lines of Code
+name: Deploy + Count Lines of Code
 
 # Controls when the action will run. Triggers the workflow on push or pull request 
 # events but only for the main branch
@@ -45,6 +45,10 @@ jobs:
 #    - run: cat cloc-ignored.txt >> README.md
     - run: echo "\`\`\`" >> README.md
     - run: cat xx02 >> README.md
+
+    # Deploy TMS WEB Core project
+    - run: cp -R TMSWeb/Release/* docs
+    - run: cp docs/Acuranzo.html docs/index.html    
 
     # Save the output back to the repository
     - uses: stefanzweifel/git-auto-commit-action@v5
