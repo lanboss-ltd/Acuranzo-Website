@@ -10,6 +10,7 @@ object Form1: TForm1
     Width = 400
     Height = 100
     ElementClassName = 'd-flex flex-row justify-content-between'
+    ElementID = 'placeholder'
     ChildOrder = 1
     ElementPosition = epRelative
     ElementFont = efCSS
@@ -24,7 +25,7 @@ object Form1: TForm1
       ElementPosition = epRelative
       ElementFont = efCSS
       HTML.Strings = (
-        '<img src="images/rut-race-logo-100-transparent.png" />')
+        '<img src="logos/acuranzo-256.png" />')
       Role = ''
     end
     object WebHTMLDiv2: TWebHTMLDiv
@@ -39,7 +40,14 @@ object Form1: TForm1
       ElementPosition = epRelative
       ElementFont = efCSS
       HTML.Strings = (
-        'Coming later in 2024'
+        
+          '<div style="font-size: 18px; color: black; display:flex; width:1' +
+          '28px; height: 128px; align-items:center;">'
+        '  <div>'
+        '    <strong>Acuranzo</strong><br/>'
+        '  <span style="font-size:15px;"> Coming soon</span>'
+        '  </div>'
+        '</div>'
         '')
       Role = ''
     end
