@@ -5,22 +5,24 @@ This repository contains the public-facing https://www.acuranzo.com website code
 [![Count Lines of Code](https://github.com/lanboss-ltd/Acuranzo-Website/actions/workflows/main.yml/badge.svg)](https://github.com/lanboss-ltd/Acuranzo-Website/actions/workflows/main.yml)
 <!--CLOC-START -->
 ```
-Last updated at 2024-03-18 10:41:46 UTC
+Last updated at 2024-03-18 17:22:38 UTC
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
-HTML                             3              0              0             42
-JSON                             1              0              0             34
+JavaScript                       3            243            162          51172
+HTML                             5             34             23            221
+Delphi Form                      2              0              0             94
+JSON                             2              0              0             68
 YAML                             1              8             13             33
-Pascal                           2             11              2             29
-XML                              1              0              0             27
-JavaScript                       1              3              0             25
+Pascal                           2             11              2             32
+XML                              1              0              0             28
 Markdown                         1              2              2             24
-Delphi Form                      1              0              0             13
+CSS                              1              2              2             22
+INI                              1              0              0              9
 -------------------------------------------------------------------------------
-SUM:                            11             24             17            227
+SUM:                            19            300            204          51703
 -------------------------------------------------------------------------------
-6 Files (without source code) were skipped
+21 Files (without source code) were skipped
 ```
 <!--CLOC-END-->
 
