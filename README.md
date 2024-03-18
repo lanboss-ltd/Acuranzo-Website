@@ -5,24 +5,23 @@ This repository contains the public-facing https://www.acuranzo.com website code
 [![Count Lines of Code](https://github.com/lanboss-ltd/Acuranzo-Website/actions/workflows/main.yml/badge.svg)](https://github.com/lanboss-ltd/Acuranzo-Website/actions/workflows/main.yml)
 <!--CLOC-START -->
 ```
-Last updated at 2024-03-18 17:22:38 UTC
+Last updated at 2024-03-18 17:23:51 UTC
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
 JavaScript                       3            243            162          51172
-HTML                             5             34             23            221
-Delphi Form                      2              0              0             94
+HTML                             4             23             16            156
 JSON                             2              0              0             68
+Delphi Form                      1              0              0             47
 YAML                             1              8             13             33
 Pascal                           2             11              2             32
 XML                              1              0              0             28
-Markdown                         1              2              2             24
+Markdown                         1              2              2             26
 CSS                              1              2              2             22
-INI                              1              0              0              9
 -------------------------------------------------------------------------------
-SUM:                            19            300            204          51703
+SUM:                            16            289            197          51584
 -------------------------------------------------------------------------------
-21 Files (without source code) were skipped
+20 Files (without source code) were skipped
 ```
 <!--CLOC-END-->
 
