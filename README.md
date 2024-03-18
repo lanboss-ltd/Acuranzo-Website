@@ -3,7 +3,7 @@ This repository contains the public-facing https://www.acuranzo.com website code
 
 ## Repository Information
 [![Count Lines of Code](https://github.com/lanboss-ltd/Acuranzo-Website/actions/workflows/main.yml/badge.svg)](https://github.com/lanboss-ltd/Acuranzo-Website/actions/workflows/main.yml)
-<!-- CLOC-START -->
+<!--CLOC-START-->
 ```
 Last updated at 2024-03-18 10:22:18 UTC
 -------------------------------------------------------------------------------
@@ -22,6 +22,6 @@ SUM:                            11             24             17            208
 -------------------------------------------------------------------------------
 6 Files (without source code) were skipped
 ```
-<!-- CLOC-END -->
+<!--CLOC-END-->
 
 ## Contact Information
