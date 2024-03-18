@@ -24,7 +24,7 @@ jobs:
     steps:
     
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     # Runs djdefi/cloc-action
     - name: Count Lines of Code (cloc)
@@ -47,7 +47,7 @@ jobs:
     - run: cat xx02 >> README.md
 
     # Save the output back to the repository
-    - uses: stefanzweifel/git-auto-commit-action@v4
+    - uses: stefanzweifel/git-auto-commit-action@v5
       with:
         skip_dirty_check: true            
         branch: main
