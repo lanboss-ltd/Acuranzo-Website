@@ -35,7 +35,7 @@ jobs:
     # Copy the new cloc.txt contents into the README.md file at the appropriate spot
     - run: csplit README.md /\<\!--CLOC/ {1}
     - run: cp xx00 README.md
-    - run: echo "<!--CLOC-START -->" >> README.md
+    - run: echo "<!-- CLOC-START -->" >> README.md
     - run: echo "\`\`\`" >> README.md
     - run: echo "NOW=$(date +'%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_ENV
     - run: echo "Last updated at ${{ env.NOW }}" >> README.md
