@@ -27,7 +27,7 @@ jobs:
     - uses: actions/checkout@v4
 
     # Copy the TMS WEB Core release files into the /docs folder
-    - run: cp -R TMSWeb/Release /docs
+    - run: cp -R TMSWeb/Release/* /docs
     - run: cp /docs/Acuranzo.html /docs/index.html
     
     # Save the output back to the repository
