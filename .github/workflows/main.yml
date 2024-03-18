@@ -30,7 +30,11 @@ jobs:
     - name: Count Lines of Code (cloc)
       uses: djdefi/cloc-action@main
       with:
-        options: --report-file=cloc.txt --ignored=cloc-ignored.txt
+        options: --report-file=cloc.txt --ignored=cloc-ignored.txt --exclude-dir=docs,TMSWeb,.github
+
+    # Deploy TMS WEB Core project
+    - run: cp -R TMSWeb/Release/* docs
+    - run: cp docs/Acuranzo.html docs/index.html    
 
     # Copy the new cloc.txt contents into the README.md file at the appropriate spot
     - run: csplit README.md /\<\!--CLOC/ {1}
@@ -53,10 +57,6 @@ jobs:
     - run: rm xx01
     - run: rm xx02
     
-    # Deploy TMS WEB Core project
-    - run: cp -R TMSWeb/Release/* docs
-    - run: cp docs/Acuranzo.html docs/index.html    
-
     # Save the output back to the repository
     - uses: stefanzweifel/git-auto-commit-action@v5
       with:
