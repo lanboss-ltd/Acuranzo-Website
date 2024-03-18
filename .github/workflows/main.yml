@@ -47,10 +47,6 @@ jobs:
     - run: cat xx02 >> README.md
 
     # Deploy TMS WEB Core project
-    - run: rm -R docs-backup
-    - run: mv docs docs-backup
-    - run: mkdir docs
-    - run: cp docs-backup/CNAME docs/
     - run: cp -R TMSWeb/Release/* docs
     - run: cp docs/Acuranzo.html docs/index.html    
 
@@ -59,4 +55,4 @@ jobs:
       with:
         skip_dirty_check: true            
         branch: main
-        file_pattern: 'README.md'
+        
