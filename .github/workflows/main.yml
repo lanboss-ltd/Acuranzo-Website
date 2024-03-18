@@ -33,7 +33,7 @@ jobs:
         options: --report-file=cloc.txt --ignored=cloc-ignored.txt
 
     # Copy the new cloc.txt contents into the README.md file at the appropriate spot
-    - run: csplit README.md /\<\!--CLOC/ {1}
+    - run: csplit README.md /\<\!-- CLOC/ {1}
     - run: cp xx00 README.md
     - run: echo "<!-- CLOC-START -->" >> README.md
     - run: echo "\`\`\`" >> README.md
