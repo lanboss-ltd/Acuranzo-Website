@@ -45,6 +45,11 @@ jobs:
 #    - run: cat cloc-ignored.txt >> README.md
     - run: echo "\`\`\`" >> README.md
     - run: cat xx02 >> README.md
+    - run: rm xx00
+    - run: rm xx01
+    - run: rm xx02
+    - run: rm cloc-ignored.txt
+    
 
     # Deploy TMS WEB Core project
     - run: cp -R TMSWeb/Release/* docs
