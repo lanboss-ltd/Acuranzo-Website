@@ -6,8 +6,8 @@
 
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta $(ThemeColor)>
-    <meta $(Manifest)>
+    <meta name="theme-color" content="#FFFFFF">
+    <link rel=manifest href="Manifest.json"/>
 
     <!-- HackTimer -->
     <script src="https://cdn.jsdelivr.net/npm/hacktimer@latest/HackTimer.silent.min.js"></script>
@@ -27,14 +27,14 @@
 
     <!-- TMS WEB Core Defaults -->
     <script type="text/javascript" src="serviceworker.js"></script>
-    <script type="text/javascript" src="$(ProjectName).js"></script>
+    <script type="text/javascript" src="Acuranzo.js"></script>
     <link href="Acuranzo.css" rel="stylesheet">
 
     <!-- Splash screens and logos generated via https://progressier.com/pwa-icons-and-ios-splash-screen-generator -->
     <!-- As well as via https://apetools.webprofusion.com/#/tools/imagegorilla -->
     <link rel="icon" sizes="192x192" href="IconResMid.png">
     <link rel="apple-touch-icon" href="IconResMid.png">
-    <link $(FavIcon)/>
+    
 
     <link rel="apple-touch-startup-image" media="screen and (device-width:  375px) and (device-height:  812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="logos/iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_landscape.png">
     <link rel="apple-touch-startup-image" media="screen and (device-width:  768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="logos/9.7__iPad_Pro__7.9__iPad_mini__9.7__iPad_Air__9.7__iPad_landscape.png">
@@ -73,7 +73,18 @@
   </head>
 
   <body>
-    <meta $(BodyParameters)>
+        <script type="text/javascript">
+      if ("serviceWorker" in navigator)
+      {
+         navigator.serviceWorker.register("serviceworker.js").then(
+           function(ARegistration)
+           {}).catch(
+             function(AErr)
+             {
+               console.log("TMS WEB Core service worker registration failed", AErr);
+             });
+      }
+    </script>
   </body>
 
   <script type="text/javascript">

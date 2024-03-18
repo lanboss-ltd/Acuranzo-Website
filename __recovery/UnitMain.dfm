@@ -24,7 +24,7 @@ object Form1: TForm1
       ElementPosition = epRelative
       ElementFont = efCSS
       HTML.Strings = (
-        '<img src="images/rut-race-logo-100-transparent.png" />')
+        '<img src="images/acuranzo-logo-100-transparent.png" />')
       Role = ''
     end
     object WebHTMLDiv2: TWebHTMLDiv

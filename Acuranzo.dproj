@@ -58,9 +58,9 @@
         <TMSWebPWA>2</TMSWebPWA>
         <Icon_MainIcon>$(BDS)\bin\delphi_PROJECTICON.ico</Icon_MainIcon>
         <Icns_MainIcns>$(BDS)\bin\delphi_PROJECTICNS.icns</Icns_MainIcns>
+        <SanitizedProjectName>Acuranzo</SanitizedProjectName>
         <TMSWebPWAResIconHighFile>IconResHigh.png</TMSWebPWAResIconHighFile>
         <TMSWebHTMLFile>Acuranzo.html</TMSWebHTMLFile>
-        <SanitizedProjectName>Acuranzo</SanitizedProjectName>
         <TMSWebPWAResIconMidFile>IconResMid.png</TMSWebPWAResIconMidFile>
         <TMSWebPWAServiceWorkerFile>serviceworker.js</TMSWebPWAServiceWorkerFile>
         <TMSPWAManifestFile>Manifest.json</TMSPWAManifestFile>
@@ -130,6 +130,7 @@
             <ResourceType>RCDATA</ResourceType>
             <ResourceId>PngImage_3</ResourceId>
         </RcItem>
+        <None Include="Acuranzo.css"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -152,13 +153,19 @@
                 </Source>
             </Delphi.Personality>
             <Deployment Version="3">
-                <DeployFile LocalName="IconResHigh.png" Configuration="Debug" Class="ProjectFile">
+                <DeployFile LocalName="Win32\Debug\Acuranzo.exe" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>Acuranzo.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="Acuranzo.css" Configuration="Debug" Class="ProjectFile">
                     <Platform Name="Win32">
                         <RemoteDir>.\</RemoteDir>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="Project1.html" Configuration="Debug" Class="ProjectFile">
+                <DeployFile LocalName="IconResHigh.png" Configuration="Debug" Class="ProjectFile">
                     <Platform Name="Win32">
                         <RemoteDir>.\</RemoteDir>
                         <Overwrite>true</Overwrite>
@@ -170,15 +177,15 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="IconResMid.png" Configuration="Debug" Class="ProjectFile">
+                <DeployFile LocalName="Acuranzo.html" Configuration="Debug" Class="ProjectFile">
                     <Platform Name="Win32">
                         <RemoteDir>.\</RemoteDir>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="Win32\Debug\Acuranzo.exe" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="IconResMid.png" Configuration="Debug" Class="ProjectFile">
                     <Platform Name="Win32">
-                        <RemoteName>Acuranzo.exe</RemoteName>
+                        <RemoteDir>.\</RemoteDir>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
