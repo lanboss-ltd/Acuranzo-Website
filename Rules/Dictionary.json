@@ -1,0 +1,52 @@
+[
+  {
+    "ID": "{FBC90C76-AB03-42D8-BE0A-DF2484C046B0}",
+    "TYPE": "Dictionary",
+    "ACCESS": "Any.Read;Admin.Write",
+    "TERM": "JSON",
+    "LANG": [
+      {
+        "en-us": "JSON refers to JavaScript Object Notation - a simple text format for storing and interacting with data, similar to something like a CSV file or a YAML file."
+      }
+    ]
+  },
+  {
+    "ID": "{498B8E46-3F7E-48EB-884F-4F59BE6FD35E}",
+    "TYPE": "Dictionary",
+    "ACCESS": "Any.Read;Admin.Write",
+    "TERM": "Rick Berends",
+    "LANG": [
+      {
+        "en-ca": "Acuranzo project instigator."
+      }
+    ]
+  },
+  {
+    "ID": "{1F106A0C-7D08-4687-8DED-EEBB7B6F4AB0}",
+    "TYPE": "Dictionary",
+    "ACCESS": "Any.Read;Admin.Write",
+    "TERM": "Andrew Simard",
+    "LANG": [
+      {
+        "en-ca": "Acuranzo project participant."
+      }
+    ]
+  },
+  {
+    "ID": "{E808A9B8-8CBB-403A-8ADF-A84B47586C79}",
+    "TYPE": "Dictionary",
+    "ACCESS": "Any.Read;Admin.Write",
+    "TERM": "Acuranzo",
+    "LANG": [
+      {
+        "en-us": "The name of this colorful new project"
+      },
+      {
+        "en-ca": "The name of this colourful new project"
+      },
+      {
+        "en-gb": "The title of this colourful new product"
+      }
+    ]
+  }
+]

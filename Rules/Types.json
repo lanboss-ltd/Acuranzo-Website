@@ -1,0 +1,42 @@
+[
+  {
+    "ID": "{6DE2765E-370F-4AD8-909C-8E323D9ED88E}",
+    "SCOPE": "Global",
+    "TARGET": "Dictionary",
+    "RULES": [
+      {
+        "ID": {
+          "REQ": "Required",
+          "DTYPE": "GUID"
+        },
+        "TYPE": {
+          "REQ": "Required",
+          "DTYPE": "String",
+          "VALUES": [
+            "Dictionary"
+          ]
+        },
+        "TERM": {
+          "REQ": "String",
+          "DTYPE": "String",
+          "FLAGS": [
+            "NOTNULL",
+            "MAX(30)",
+            "PLAINTEXT"
+          ]
+        },
+        "LANG": {
+          "REQ": "Optional",
+          "DTYPE": "Array:KeyValue",
+          "KEYS": "String:LanguageCode",
+          "VALUES": "String",
+          "FLAGS": [
+            "NOTNULL",
+            "MAX(200)",
+            "LINKTEXT"
+          ]
+        }
+      }
+    ]
+  }
+]
