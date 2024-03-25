@@ -8,12 +8,11 @@ body {
 
 /* Fancy CSS Background Pattern */
 /* https://freefrontend.com/css-background-patterns/page/2/ */
-html {
---s: 64px; /* control the size */
-  --c1: #666699;
-  --c2: #041010;
-  --c3: #B0B0FF;
-
+body {
+  --s: 32px; /* control the size */
+  --c1: #666666;
+  --c2: #888888;
+  --c3: #777777;
   --_g: var(--c3) 0 120deg,#0000 0;
   background:
     conic-gradient(from -60deg at 50% calc(100%/3),var(--_g)),
@@ -23,15 +22,16 @@ html {
     linear-gradient(90deg,var(--c1)   calc(100%/6),var(--c2) 0 50%,
                           var(--c1) 0 calc(500%/6),var(--c2) 0);
   background-size: calc(1.732*var(--s)) var(--s);
+  background-color: transparent !important;
 }
 
 #placeholder {
     width: 275px !important;
     height: 128px !important;
     position: relative;
-    background: rgba(128,128,192,0.1);
+    background: rgba(128,128,128,0.1);
     border-radius: 30px;
-    filter: drop-shadow(0px 0px 10px #8080C0) drop-shadow(0px 0px 10px #8080C0) drop-shadow(0px 0px 10px #8080C0) drop-shadow(0px 0px 10px #8080C0)drop-shadow(0px 0px 10px #8080C0);
+    filter: grayscale(1) drop-shadow(0px 0px 10px #808080) drop-shadow(0px 0px 10px #808080) drop-shadow(0px 0px 10px #808080) drop-shadow(0px 0px 10px #808080) drop-shadow(0px 0px 10px #808080);
 }
 #placeholder > div > img {
   width: 128px;
