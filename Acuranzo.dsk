@@ -15,28 +15,28 @@ File_12=TSourceModule,'C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Proje
 File_13=TSourceModule,'C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-XData-SurveyServerExample\UnitSupport.pas',0,1,109,91,133,0,0,,
 
 [Modules]
-Module0=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuranzo-Website\Acuranzo.html
-Module1=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuranzo-Website\Acuranzo.css
+Module0=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuranzo-Website\UnitMain.pas
+Module1=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuranzo-Website\Acuranzo.html
 Module2=default.htm
-Module3=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuranzo-Website\UnitMain.pas
+Module3=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuranzo-Website\Acuranzo.css
 Count=4
 EditWindowCount=1
 
-[C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuranzo-Website\Acuranzo.html]
+[C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuranzo-Website\UnitMain.pas]
 ModuleType=TSourceModule
 
-[C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuranzo-Website\Acuranzo.css]
+[C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuranzo-Website\Acuranzo.html]
 ModuleType=TSourceModule
 
 [default.htm]
 ModuleType=TURLModule
 
-[C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuranzo-Website\UnitMain.pas]
+[C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuranzo-Website\Acuranzo.css]
 ModuleType=TSourceModule
 
 [EditWindow0]
 ViewCount=4
-CurrentEditView=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuranzo-Website\Acuranzo.html
+CurrentEditView=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuranzo-Website\UnitMain.pas
 View0=0
 View1=1
 View2=2
@@ -64,7 +64,7 @@ RightPanelSize=2000
 RightPanelClients=DockSite2,DockSite4
 RightPanelData=000008000101000000000D1000000000000001D00700000000000001000000004412000009000000446F636B536974653201000000008A1C000009000000446F636B5369746534FFFFFFFF
 BottomPanelSize=1583
-BottomPanelClients=DockSite1,MessageView
+BottomPanelClients=MessageView,DockSite1
 BottomPanelData=0000080001020100000009000000446F636B5369746531DE44000000000000022F060000000000000100000000DE4400000F0000004D65737361676556696577466F726DFFFFFFFF
 BottomMiddlePanelSize=0
 BottomMiddlePanelClients=DockSite0,GraphDrawingModel
@@ -272,7 +272,12 @@ TBDockHeight=9077
 LRDockWidth=1896
 Dockable=1
 StayOnTop=0
-SplitPos=116
+SplitPos=111
+
+[PropInspDesignerSelection]
+ArrangeBy=Name
+SelectedItem=Caption,
+ExpandedItems=Font=0,LiveBindings=0,"LiveBindings Designer=0",Margins=0,Anchors=0,Center=0
 
 [frmDesignPreview]
 PercentageSizes=1
@@ -299,8 +304,8 @@ Create=1
 Visible=0
 Docked=1
 State=0
-Left=-1528
-Top=281
+Left=0
+Top=0
 Width=276
 Height=365
 MaxLeft=-1
@@ -504,8 +509,8 @@ Create=1
 Visible=0
 Docked=1
 State=0
-Left=380
-Top=817
+Left=0
+Top=0
 Width=2854
 Height=3212
 MaxLeft=-1
@@ -524,7 +529,7 @@ Visible=0
 Docked=1
 State=0
 Left=-8
-Top=-88
+Top=-8
 Width=1849
 Height=3144
 MaxLeft=-1
@@ -692,8 +697,8 @@ Create=1
 Visible=0
 Docked=1
 State=0
-Left=0
-Top=24
+Left=8
+Top=8
 Width=3823
 Height=1423
 MaxLeft=-1
