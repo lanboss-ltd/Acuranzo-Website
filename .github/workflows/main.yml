@@ -48,6 +48,7 @@ jobs:
     - run: echo "${{ env.SKIP }} Files (without source code) were skipped:" >> README.md
     - run: |
         awk '{sub(/:.*/,""); ext=tolower($1); ext=substr(ext, match(ext, /[^\/]*$/)); ext=substr(ext, match(ext, /\.[^.]*$/)+1); counts[ext]++} END {for(i in counts) {printf("  %s: %d\n",i,counts[i])}}' cloc-ignored.txt | sort -t: -k2nr -k1 >> README.md
+    - run cat cloc-ignored.txt >> README.md
     - run: echo "\`\`\`" >> README.md
     - run: cat xx02 >> README.md
 
