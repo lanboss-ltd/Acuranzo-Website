@@ -1,6 +1,6 @@
 [
   {
-    "ID": "{FBC90C76-AB03-42D8-BE0A-DF2484C046B0}",
+    "ID": "{FBC90C76-AB03-42D8-BE0A-DF2484C646B0}",
     "TYPE": "Dictionary",
     "ACCESS": "Any.Read;Admin.Write",
     "TERM": "JSON",
