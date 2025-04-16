@@ -60,10 +60,10 @@
         <Icns_MainIcns>$(BDS)\bin\delphi_PROJECTICNS.icns</Icns_MainIcns>
         <SanitizedProjectName>Acuranzo</SanitizedProjectName>
         <TMSWebHTMLFile>Acuranzo.html</TMSWebHTMLFile>
+        <TMSPWAManifestFile>Manifest.json</TMSPWAManifestFile>
+        <TMSWebPWAServiceWorkerFile>serviceworker.js</TMSWebPWAServiceWorkerFile>
         <TMSWebPWAResIconLowFile>IconResLow.png</TMSWebPWAResIconLowFile>
         <TMSWebPWAResIconMidFile>IconResMid.png</TMSWebPWAResIconMidFile>
-        <TMSWebPWAServiceWorkerFile>serviceworker.js</TMSWebPWAServiceWorkerFile>
-        <TMSPWAManifestFile>Manifest.json</TMSPWAManifestFile>
         <TMSWebPWAResIconHighFile>IconResHigh.png</TMSWebPWAResIconHighFile>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
@@ -449,13 +449,13 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="logos\12.9__iPad_Pro_portrait.png" Configuration="Debug" Class="ProjectFile">
+                <DeployFile LocalName="logos\10.2__iPad_landscape.png" Configuration="Debug" Class="ProjectFile">
                     <Platform Name="Win32">
                         <RemoteDir>.\</RemoteDir>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="logos\10.2__iPad_landscape.png" Configuration="Debug" Class="ProjectFile">
+                <DeployFile LocalName="logos\12.9__iPad_Pro_portrait.png" Configuration="Debug" Class="ProjectFile">
                     <Platform Name="Win32">
                         <RemoteDir>.\</RemoteDir>
                         <Overwrite>true</Overwrite>
