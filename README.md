@@ -5,22 +5,34 @@ This repository contains the public-facing https://www.acuranzo.com website code
 [![Count Lines of Code](https://github.com/lanboss-ltd/Acuranzo-Website/actions/workflows/main.yml/badge.svg)](https://github.com/lanboss-ltd/Acuranzo-Website/actions/workflows/main.yml)
 <!--CLOC-START -->
 ```
-Last updated at 2024-05-14 17:09:26 UTC
+Last updated at 2025-04-16 06:47:10 UTC
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
-JSON                             3              0              0            128
-HTML                             2             12              9             77
+JSON                             4              0              0            162
+HTML                             3             25             18            154
+JavaScript                       3              6              0             95
+YAML                             2             15             23             71
 XML                              1              0              0             66
 Delphi Form                      1              2              0             55
+Markdown                         1              2              2             36
 CSS                              1              2              2             35
 Pascal                           2             11              2             32
-JavaScript                       1              3              0             25
-Markdown                         1              2              2             24
 -------------------------------------------------------------------------------
-SUM:                            12             32             15            442
+SUM:                            18             63             47            706
 -------------------------------------------------------------------------------
-47 Files (without source code) were skipped
+138 Files were skipped (duplicate, binary, or without source code):
+  png: 120
+  html: 4
+  ico: 4
+  css: 2
+  js: 2
+  cname: 1
+  dproj: 1
+  dsk: 1
+  gitignore: 1
+  identcache: 1
+  json: 1
 ```
 <!--CLOC-END-->
 
