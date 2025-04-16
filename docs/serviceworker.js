@@ -44,7 +44,6 @@ var CACHED_URLS = [
   "logos/iPhone_8__iPhone_7__iPhone_6s__iPhone_6__4.7__iPhone_SE_portrait.png",
   "logos/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_landscape.png",
   "logos/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_portrait.png",
-  "Manifest.json",
   "UnitMain.html"
   ];
 
