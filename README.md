@@ -5,32 +5,33 @@ This repository contains the public-facing https://www.acuranzo.com website code
 [![Count Lines of Code](https://github.com/lanboss-ltd/Acuranzo-Website/actions/workflows/main.yml/badge.svg)](https://github.com/lanboss-ltd/Acuranzo-Website/actions/workflows/main.yml)
 <!--CLOC-START -->
 ```
-Last updated at 2025-04-16 06:57:46 UTC
+Last updated at 2025-04-17 05:53:20 UTC
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
-Delphi Form                      1              2              0            384
-JavaScript                       5              9              0            164
+Delphi Form                      1              2              0            563
+HTML                             4             38             27            233
 JSON                             4              0              0            162
-HTML                             3             25             18            154
 XML                              1              0              0            116
-Pascal                           2             14              2             76
+JavaScript                       4              6              0             95
+Pascal                           2             14              2             90
+CSS                              2              8             15             75
 YAML                             2             15             23             71
-CSS                              2              5              7             57
-Markdown                         1              2              2             36
+Markdown                         1              2              2             35
 -------------------------------------------------------------------------------
-SUM:                            21             72             52           1220
+SUM:                            21             85             69           1440
 -------------------------------------------------------------------------------
-141 Files were skipped (duplicate, binary, or without source code):
-  png: 126
-  html: 4
+144 Files were skipped (duplicate, binary, or without source code):
+  png: 129
   ico: 4
+  html: 3
   cname: 1
   css: 1
   dproj: 1
   dsk: 1
   gitignore: 1
   identcache: 1
+  js: 1
   json: 1
 ```
 <!--CLOC-END-->
