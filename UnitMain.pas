@@ -39,7 +39,13 @@ type
     divAPIBot: TWebHTMLDiv;
     divAPIBotCaption: TWebHTMLDiv;
     divAPIBotIcon: TWebHTMLDiv;
-    WebHTMLDiv3: TWebHTMLDiv;
+    WebHTMLDiv2: TWebHTMLDiv;
+    divTop: TWebHTMLDiv;
+    WebLabel1: TWebLabel;
+    WebButton1: TWebButton;
+    WebButton2: TWebButton;
+    divLanboss: TWebHTMLDiv;
+    divDemoButtons: TWebHTMLDiv;
     WebButton6: TWebButton;
     WebButton7: TWebButton;
     WebButton8: TWebButton;
@@ -50,14 +56,11 @@ type
     WebButton13: TWebButton;
     WebButton14: TWebButton;
     WebButton15: TWebButton;
-    WebHTMLDiv2: TWebHTMLDiv;
-    WebHTMLDiv1: TWebHTMLDiv;
-    WebLabel1: TWebLabel;
-    WebButton1: TWebButton;
-    WebButton2: TWebButton;
     procedure divManagementClick(Sender: TObject);
     procedure divEducationClick(Sender: TObject);
     procedure divAPIClick(Sender: TObject);
+    procedure divLanbossClick(Sender: TObject);
+    procedure WebFormResize(Sender: TObject);
   private
     { Private declarations }
   public
@@ -76,9 +79,30 @@ begin
   window.open('https://lms.lanbuzz.com', '_blank');
 end;
 
+procedure TForm1.divLanbossClick(Sender: TObject);
+begin
+  window.open('https://www.lanboss.com', '_blank');
+end;
+
 procedure TForm1.divManagementClick(Sender: TObject);
 begin
   window.open('https://client.acuranzo.com', '_blank');
+end;
+
+procedure TForm1.WebFormResize(Sender: TObject);
+begin
+
+  asm
+    var pw = divMain.offsetWidth;  // parent width
+    var sw = 292;
+
+    if (pw > 849)
+      { sw = 816 }
+    else if (pw > 606)
+      { sw = 554 }
+
+    divDemos.style.setProperty('max-width', sw+'px');
+  end;
 end;
 
 procedure TForm1.divAPIClick(Sender: TObject);

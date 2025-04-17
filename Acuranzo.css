@@ -4,36 +4,91 @@ body {
   height: 100%;
   overflow: hidden;
   font-family: Lexend;
-}
-
-body {
   background-color: white;
 }
 
+/*
+** Theme Colors
+*/
+:root {
+  --color-orange: rgb(254,157,66);
+  --color-orange-dark: rgb(224,127,25);
+  --color-orange-light: #FEE8D6;
+  --color-margin: rgb(240,240,240);
+  --color-margin-shade: rgba(0,0,0,.25);
+}
+
 .OrangeOctopus {
-  background-color: orange;
+  background-color: var(--color-orange);
 }
 
 /*
-** Left
+** Page Layout
+**
+** Basic idea is to have a sidebar on the left, and then a main section
+** that takes up the rest of the page. In order to have some semblance
+** of 'responsive' we'll set the main sections to be centered with a
+** minimum and maximum width so as to be flexible, but not irrationally
+** so much that it messes up with our presentation.
+*/
+
+#divMain {
+  width: 100% !important;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+
+#divTop,
+#divDemo,
+#divDemos,
+#divBottom {
+  min-width: 260px;
+  max-width: 900px;
+}
+
+/* Same as logo on left */
+#divTop {
+  margin-top: 12px;
+  min-height: 60px;
+  flex-shrink: 0;
+}
+
+#divDemo {
+  min-height: 250px;
+  flex-shrink: 0;
+}
+
+#divDemos {
+  background-color: var(--color-orange-light);
+}
+.btnDemo {
+  width: 250px !important;
+  height: 60px !important;
+}
+
+/*
+** Left Margin / Sidebar
 */
 #divMargin {
-  background-color: #FEE8D6;
-  border-right: 3px solid #AAAAAA;
+  background-color: var(--color-margin);
+  box-shadow: inset -13px 0 20px -13px var(--color-margin-shade);
+  width: 120px !important;
+  flex-shrink: 0;
 }
 
 /*
-** Bottom
+** Bottom Buttons
 **
 ** Adjust icon scale so that they sort of look the same size
 ** We should in theory just upload proper-sized icons, but for
 ** the moment this gets us to where we need to be.
 */
 .BotBackground {
-  background-color: #FEE8D6;
+  background-color: var(--color-orange-light);
 }
 .BotBackground:hover {
-  background-color: #CCCCCC;
+  background-color: var(--color-orange-dark);
 }
 .BotCaptionTop {
   font-size: 16px;

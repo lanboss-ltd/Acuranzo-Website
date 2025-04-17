@@ -4,12 +4,14 @@ object Form1: TForm1
   CSSLibrary = cssBootstrap
   ElementClassName = 'd-flex flex-row w-100 h-100'
   ElementFont = efCSS
+  OnResize = WebFormResize
   object divMain: TWebHTMLDiv
     Left = 164
     Top = 32
     Width = 801
     Height = 801
-    ElementClassName = 'd-flex flex-column h-100 w-100'
+    ElementClassName = 'px-3 gap-3 d-flex flex-column h-100 w-100 align-items-center'
+    ElementID = 'divMain'
     ChildOrder = 4
     ElementPosition = epRelative
     ElementFont = efCSS
@@ -19,8 +21,14 @@ object Form1: TForm1
       Top = 701
       Width = 713
       Height = 74
-      ElementClassName = 'd-flex flex-row flex-wrap gap-3 justify-content-center'
+      ElementClassName = 
+        'order-3 d-flex flex-row flex-wrap gap-3 my-3 justify-content-cen' +
+        'ter'
+      ElementID = 'divBottom'
+      HeightStyle = ssAuto
+      WidthStyle = ssPercent
       ChildOrder = 3
+      ElementPosition = epRelative
       ElementFont = efCSS
       Role = ''
       object divEducation: TWebHTMLDiv
@@ -353,167 +361,33 @@ object Form1: TForm1
         end
       end
     end
-    object WebHTMLDiv3: TWebHTMLDiv
-      Left = 32
-      Top = 400
-      Width = 729
-      Height = 281
-      ElementClassName = 'rounded border border-secondary bg-white'
-      ChildOrder = 2
-      ElementFont = efCSS
-      Role = ''
-      object WebButton6: TWebButton
-        Left = 16
-        Top = 30
-        Width = 329
-        Height = 40
-        Caption = 'Demo'
-        ElementClassName = 'rounded btn btn-info'
-        ElementFont = efCSS
-        HeightStyle = ssAuto
-        HeightPercent = 100.000000000000000000
-        WidthPercent = 100.000000000000000000
-      end
-      object WebButton7: TWebButton
-        Left = 16
-        Top = 76
-        Width = 329
-        Height = 40
-        Caption = 'Demo'
-        ChildOrder = 1
-        ElementClassName = 'rounded btn btn-info'
-        ElementFont = efCSS
-        HeightStyle = ssAuto
-        HeightPercent = 100.000000000000000000
-        WidthPercent = 100.000000000000000000
-      end
-      object WebButton8: TWebButton
-        Left = 16
-        Top = 122
-        Width = 329
-        Height = 40
-        Caption = 'Demo'
-        ChildOrder = 2
-        ElementClassName = 'rounded btn btn-info'
-        ElementFont = efCSS
-        HeightStyle = ssAuto
-        HeightPercent = 100.000000000000000000
-        WidthPercent = 100.000000000000000000
-      end
-      object WebButton9: TWebButton
-        Left = 16
-        Top = 168
-        Width = 329
-        Height = 40
-        Caption = 'Demo'
-        ChildOrder = 3
-        ElementClassName = 'rounded btn btn-info'
-        ElementFont = efCSS
-        HeightStyle = ssAuto
-        HeightPercent = 100.000000000000000000
-        WidthPercent = 100.000000000000000000
-      end
-      object WebButton10: TWebButton
-        Left = 16
-        Top = 214
-        Width = 329
-        Height = 40
-        Caption = 'Demo'
-        ChildOrder = 4
-        ElementClassName = 'rounded btn btn-info'
-        ElementFont = efCSS
-        HeightStyle = ssAuto
-        HeightPercent = 100.000000000000000000
-        WidthPercent = 100.000000000000000000
-      end
-      object WebButton11: TWebButton
-        Left = 384
-        Top = 30
-        Width = 329
-        Height = 40
-        Caption = 'Demo'
-        ChildOrder = 5
-        ElementClassName = 'rounded btn btn-info'
-        ElementFont = efCSS
-        HeightStyle = ssAuto
-        HeightPercent = 100.000000000000000000
-        WidthPercent = 100.000000000000000000
-      end
-      object WebButton12: TWebButton
-        Left = 384
-        Top = 76
-        Width = 329
-        Height = 40
-        Caption = 'Demo'
-        ChildOrder = 1
-        ElementClassName = 'rounded btn btn-info'
-        ElementFont = efCSS
-        HeightStyle = ssAuto
-        HeightPercent = 100.000000000000000000
-        WidthPercent = 100.000000000000000000
-      end
-      object WebButton13: TWebButton
-        Left = 384
-        Top = 122
-        Width = 329
-        Height = 40
-        Caption = 'Demo'
-        ChildOrder = 2
-        ElementClassName = 'rounded btn btn-info'
-        ElementFont = efCSS
-        HeightStyle = ssAuto
-        HeightPercent = 100.000000000000000000
-        WidthPercent = 100.000000000000000000
-      end
-      object WebButton14: TWebButton
-        Left = 384
-        Top = 168
-        Width = 329
-        Height = 40
-        Caption = 'Demo'
-        ChildOrder = 3
-        ElementClassName = 'rounded btn btn-info'
-        ElementFont = efCSS
-        HeightStyle = ssAuto
-        HeightPercent = 100.000000000000000000
-        WidthPercent = 100.000000000000000000
-      end
-      object WebButton15: TWebButton
-        Left = 384
-        Top = 214
-        Width = 329
-        Height = 40
-        Caption = 'Demo'
-        ChildOrder = 4
-        ElementClassName = 'rounded btn btn-info'
-        ElementFont = efCSS
-        HeightStyle = ssAuto
-        HeightPercent = 100.000000000000000000
-        WidthPercent = 100.000000000000000000
-      end
-    end
     object WebHTMLDiv2: TWebHTMLDiv
       Left = 32
       Top = 128
       Width = 729
-      Height = 266
-      ElementClassName = 'OrangeOctopus rounded border border-secondary'
+      Height = 186
+      ElementClassName = 'order-1 OrangeOctopus rounded border border-secondary'
+      ElementID = 'divDemo'
+      WidthStyle = ssPercent
       ChildOrder = 1
+      ElementPosition = epRelative
       ElementFont = efCSS
       Role = ''
     end
-    object WebHTMLDiv1: TWebHTMLDiv
+    object divTop: TWebHTMLDiv
       Left = 32
-      Top = 8
+      Top = 10
       Width = 729
-      Height = 98
-      ElementClassName = 'rounded border border-secondary bg-white'
-      ChildOrder = 3
+      Height = 60
+      ElementClassName = 'order-0 rounded border border-secondary bg-white'
+      ElementID = 'divTop'
+      WidthStyle = ssPercent
+      ElementPosition = epRelative
       ElementFont = efCSS
       Role = ''
       object WebLabel1: TWebLabel
-        Left = 24
-        Top = 42
+        Left = 9
+        Top = 10
         Width = 189
         Height = 13
         Caption = 'Welcome to  the Lanboss.ai Demo Page'
@@ -524,36 +398,199 @@ object Form1: TForm1
       end
       object WebButton1: TWebButton
         Left = 488
-        Top = 30
+        Top = 10
         Width = 96
         Height = 40
         Caption = 'Login'
         ChildOrder = 1
         ElementClassName = 'rounded btn btn-primary'
         ElementFont = efCSS
-        HeightStyle = ssAuto
         HeightPercent = 100.000000000000000000
         WidthPercent = 100.000000000000000000
       end
       object WebButton2: TWebButton
         Left = 600
-        Top = 30
+        Top = 10
         Width = 96
         Height = 40
         Caption = 'Register'
         ChildOrder = 1
         ElementClassName = 'rounded btn btn-primary'
         ElementFont = efCSS
+        HeightPercent = 100.000000000000000000
+        WidthPercent = 100.000000000000000000
+      end
+    end
+    object divDemoButtons: TWebHTMLDiv
+      Left = 72
+      Top = 345
+      Width = 667
+      Height = 266
+      ElementClassName = 
+        'p-3 order-2 d-flex flex-wrap gap-3 rounded border border-seconda' +
+        'ry justify-content-center align-items-center'
+      ElementID = 'divDemos'
+      HeightStyle = ssAuto
+      WidthStyle = ssAuto
+      ChildOrder = 2
+      ElementPosition = epRelative
+      ElementFont = efCSS
+      Role = ''
+      object WebButton6: TWebButton
+        Left = 16
+        Top = 30
+        Width = 250
+        Height = 40
+        Caption = 'Demo'
+        ElementClassName = 'rounded btn btn-info btnDemo'
+        ElementFont = efCSS
+        ElementPosition = epRelative
         HeightStyle = ssAuto
         HeightPercent = 100.000000000000000000
+        WidthStyle = ssAuto
+        WidthPercent = 100.000000000000000000
+      end
+      object WebButton7: TWebButton
+        Left = 16
+        Top = 76
+        Width = 250
+        Height = 40
+        Caption = 'Demo'
+        ChildOrder = 1
+        ElementClassName = 'rounded btn btn-info btnDemo'
+        ElementFont = efCSS
+        ElementPosition = epRelative
+        HeightStyle = ssAuto
+        HeightPercent = 100.000000000000000000
+        WidthStyle = ssAuto
+        WidthPercent = 100.000000000000000000
+      end
+      object WebButton8: TWebButton
+        Left = 16
+        Top = 122
+        Width = 250
+        Height = 40
+        Caption = 'Demo'
+        ChildOrder = 2
+        ElementClassName = 'rounded btn btn-info btnDemo'
+        ElementFont = efCSS
+        ElementPosition = epRelative
+        HeightStyle = ssAuto
+        HeightPercent = 100.000000000000000000
+        WidthStyle = ssAuto
+        WidthPercent = 100.000000000000000000
+      end
+      object WebButton9: TWebButton
+        Left = 16
+        Top = 168
+        Width = 250
+        Height = 40
+        Caption = 'Demo'
+        ChildOrder = 3
+        ElementClassName = 'rounded btn btn-info btnDemo'
+        ElementFont = efCSS
+        ElementPosition = epRelative
+        HeightStyle = ssAuto
+        HeightPercent = 100.000000000000000000
+        WidthStyle = ssAuto
+        WidthPercent = 100.000000000000000000
+      end
+      object WebButton10: TWebButton
+        Left = 16
+        Top = 214
+        Width = 250
+        Height = 40
+        Caption = 'Demo'
+        ChildOrder = 4
+        ElementClassName = 'rounded btn btn-info btnDemo'
+        ElementFont = efCSS
+        ElementPosition = epRelative
+        HeightStyle = ssAuto
+        HeightPercent = 100.000000000000000000
+        WidthStyle = ssAuto
+        WidthPercent = 100.000000000000000000
+      end
+      object WebButton11: TWebButton
+        Left = 360
+        Top = 30
+        Width = 250
+        Height = 40
+        Caption = 'Demo'
+        ChildOrder = 5
+        ElementClassName = 'rounded btn btn-info btnDemo'
+        ElementFont = efCSS
+        ElementPosition = epRelative
+        HeightStyle = ssAuto
+        HeightPercent = 100.000000000000000000
+        WidthStyle = ssAuto
+        WidthPercent = 100.000000000000000000
+      end
+      object WebButton12: TWebButton
+        Left = 360
+        Top = 76
+        Width = 250
+        Height = 40
+        Caption = 'Demo'
+        ChildOrder = 1
+        ElementClassName = 'rounded btn btn-info btnDemo'
+        ElementFont = efCSS
+        ElementPosition = epRelative
+        HeightStyle = ssAuto
+        HeightPercent = 100.000000000000000000
+        WidthStyle = ssAuto
+        WidthPercent = 100.000000000000000000
+      end
+      object WebButton13: TWebButton
+        Left = 360
+        Top = 122
+        Width = 250
+        Height = 40
+        Caption = 'Demo'
+        ChildOrder = 2
+        ElementClassName = 'rounded btn btn-info btnDemo'
+        ElementFont = efCSS
+        ElementPosition = epRelative
+        HeightStyle = ssAuto
+        HeightPercent = 100.000000000000000000
+        WidthStyle = ssAuto
+        WidthPercent = 100.000000000000000000
+      end
+      object WebButton14: TWebButton
+        Left = 360
+        Top = 168
+        Width = 250
+        Height = 40
+        Caption = 'Demo'
+        ChildOrder = 3
+        ElementClassName = 'rounded btn btn-info btnDemo'
+        ElementFont = efCSS
+        ElementPosition = epRelative
+        HeightStyle = ssAuto
+        HeightPercent = 100.000000000000000000
+        WidthStyle = ssAuto
+        WidthPercent = 100.000000000000000000
+      end
+      object WebButton15: TWebButton
+        Left = 360
+        Top = 214
+        Width = 250
+        Height = 40
+        Caption = 'Demo'
+        ChildOrder = 4
+        ElementClassName = 'rounded btn btn-info btnDemo'
+        ElementFont = efCSS
+        ElementPosition = epRelative
+        HeightStyle = ssAuto
+        HeightPercent = 100.000000000000000000
+        WidthStyle = ssAuto
         WidthPercent = 100.000000000000000000
       end
     end
   end
   object divMargin: TWebHTMLDiv
     Left = 8
-    Top = 50
-    Width = 150
+    Top = 10
+    Width = 120
     Height = 759
     ElementClassName = 'h-100'
     ElementID = 'divMargin'
@@ -561,5 +598,20 @@ object Form1: TForm1
     ElementPosition = epRelative
     ElementFont = efCSS
     Role = ''
+    object divLanboss: TWebHTMLDiv
+      Left = 10
+      Top = 10
+      Width = 100
+      Height = 100
+      Cursor = crHandPoint
+      ChildOrder = 2
+      ElementFont = efCSS
+      HTML.Strings = (
+        
+          '<img class="Octopus" width=100 height=100 src=images/lanboss.png' +
+          '>')
+      Role = ''
+      OnClick = divLanbossClick
+    end
   end
 end
