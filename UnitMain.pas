@@ -9,13 +9,37 @@ uses
 
 type
   TForm1 = class(TWebForm)
-    WebHTMLDiv1: TWebHTMLDiv;
-    WebHTMLDiv2: TWebHTMLDiv;
+    divMargin: TWebHTMLDiv;
+    divMain: TWebHTMLDiv;
+    divBottom: TWebHTMLDiv;
+    divEducation: TWebHTMLDiv;
+    divEduImage: TWebHTMLDiv;
+    divEduBackground: TWebHTMLDiv;
+    divEduTop: TWebHTMLDiv;
+    divEduTopCaption: TWebHTMLDiv;
+    divEduTopIcon: TWebHTMLDiv;
+    divEduBot: TWebHTMLDiv;
+    divEduBotCaption: TWebHTMLDiv;
+    divEduBotIcon: TWebHTMLDiv;
+    divManagement: TWebHTMLDiv;
+    divMgtIcon: TWebHTMLDiv;
+    divMgtBackground: TWebHTMLDiv;
+    divMgtTop: TWebHTMLDiv;
+    divMgtTopCaption: TWebHTMLDiv;
+    divMgtTopIcon: TWebHTMLDiv;
+    divMgtBot: TWebHTMLDiv;
+    divMgtBotCaption: TWebHTMLDiv;
+    divMgtBotIcon: TWebHTMLDiv;
+    divAPI: TWebHTMLDiv;
+    divAPIIcon: TWebHTMLDiv;
+    divAPIBackground: TWebHTMLDiv;
+    divAPITop: TWebHTMLDiv;
+    divAPITopCaption: TWebHTMLDiv;
+    divAPITopIcon: TWebHTMLDiv;
+    divAPIBot: TWebHTMLDiv;
+    divAPIBotCaption: TWebHTMLDiv;
+    divAPIBotIcon: TWebHTMLDiv;
     WebHTMLDiv3: TWebHTMLDiv;
-    WebHTMLDiv4: TWebHTMLDiv;
-    WebButton1: TWebButton;
-    WebButton2: TWebButton;
-    WebLabel1: TWebLabel;
     WebButton6: TWebButton;
     WebButton7: TWebButton;
     WebButton8: TWebButton;
@@ -26,24 +50,14 @@ type
     WebButton13: TWebButton;
     WebButton14: TWebButton;
     WebButton15: TWebButton;
-    btnEducation: TWebHTMLDiv;
-    WebHTMLDiv6: TWebHTMLDiv;
-    WebHTMLDiv7: TWebHTMLDiv;
-    WebHTMLDiv8: TWebHTMLDiv;
-    WebHTMLDiv9: TWebHTMLDiv;
-    btnManagement: TWebHTMLDiv;
-    WebHTMLDiv10: TWebHTMLDiv;
-    WebHTMLDiv11: TWebHTMLDiv;
-    WebHTMLDiv12: TWebHTMLDiv;
-    WebHTMLDiv13: TWebHTMLDiv;
-    btnAPI: TWebHTMLDiv;
-    WebHTMLDiv14: TWebHTMLDiv;
-    WebHTMLDiv15: TWebHTMLDiv;
-    WebHTMLDiv16: TWebHTMLDiv;
-    WebHTMLDiv17: TWebHTMLDiv;
-    procedure btnManagementClick(Sender: TObject);
-    procedure btnEducationClick(Sender: TObject);
-    procedure btnAPIClick(Sender: TObject);
+    WebHTMLDiv2: TWebHTMLDiv;
+    WebHTMLDiv1: TWebHTMLDiv;
+    WebLabel1: TWebLabel;
+    WebButton1: TWebButton;
+    WebButton2: TWebButton;
+    procedure divManagementClick(Sender: TObject);
+    procedure divEducationClick(Sender: TObject);
+    procedure divAPIClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -57,17 +71,17 @@ implementation
 
 {$R *.dfm}
 
-procedure TForm1.btnEducationClick(Sender: TObject);
+procedure TForm1.divEducationClick(Sender: TObject);
 begin
   window.open('https://lms.lanbuzz.com', '_blank');
 end;
 
-procedure TForm1.btnManagementClick(Sender: TObject);
+procedure TForm1.divManagementClick(Sender: TObject);
 begin
   window.open('https://client.acuranzo.com', '_blank');
 end;
 
-procedure TForm1.btnAPIClick(Sender: TObject);
+procedure TForm1.divAPIClick(Sender: TObject);
 begin
   window.open('http://localhost:5000/apidocs/', '_blank');
 end;
