@@ -11,15 +11,30 @@ body {
 ** Theme Colors
 */
 :root {
+  --color-text-highlight: #AAAAAA;
   --color-orange: rgb(254,157,66);
   --color-orange-dark: rgb(224,127,25);
   --color-orange-light: #FEE8D6;
   --color-margin: rgb(240,240,240);
   --color-margin-shade: rgba(0,0,0,.25);
+  --border-radius-button: 8px;
+  --transition-time: 500ms;
 }
 
 .OrangeOctopus {
   background-color: var(--color-orange);
+}
+
+.RegButton {
+  background-color: var(--color-orange) !important;
+  border: 1px solid var(--color-orange-dark) !important;
+  border-radius: var(--border-radius-button) !important;
+  transition: all var(--transition-time);
+}
+.RegButton:hover {
+  background-color: var(--color-orange-dark) !important;
+  border: 1px solid var(--color-orange-dark) !important;
+  border-radius: var(--border-radius-button) !important;
 }
 
 /*
@@ -65,6 +80,9 @@ body {
 .btnDemo {
   width: 250px !important;
   height: 60px !important;
+  border: 1px solid var(--color-orange-dark) !important;
+  border-radius: var(--border-radius-button) !important;
+  background-color: white;
 }
 
 /*
@@ -86,9 +104,13 @@ body {
 */
 .BotBackground {
   background-color: var(--color-orange-light);
+  border: 1px solid var(--color-orange-dark);
+  border-radius: var(--border-radius-button);
+  transition: all var(--transition-time);
 }
 .BotBackground:hover {
   background-color: var(--color-orange-dark);
+  --color-text-highlight: white;
 }
 .BotCaptionTop {
   font-size: 16px;
@@ -97,22 +119,25 @@ body {
 }
 .BotCaptionBot {
   font-size: 14px;
-  color: #AAAAAA;
+  color: var(--color-text-highlight);
   white-space: nowrap;
+  transition: all var(--transition-time);
 }
 .BotIconTop {
   font-size: 14px;
-  color: #AAAAAA;
+  color: var(--color-text-highlight);
   text-align: center;
   left: unset !important;
   right: 5px;
+  transition: all var(--transition-time);
 }
 .BotIconBot {
   font-size: 14px;
-  color: #AAAAAA;
+  color: var(--color-text-highlight);
   text-align: center;
   left: unset !important;
   right: 5px;
+  transition: all var(--transition-time);
 }
 img.Octopus {
 }
