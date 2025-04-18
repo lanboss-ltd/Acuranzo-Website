@@ -5,24 +5,24 @@ This repository contains the public-facing https://www.acuranzo.com website code
 [![Count Lines of Code](https://github.com/lanboss-ltd/Acuranzo-Website/actions/workflows/main.yml/badge.svg)](https://github.com/lanboss-ltd/Acuranzo-Website/actions/workflows/main.yml)
 <!--CLOC-START -->
 ```
-Last updated at 2025-04-17 23:41:54 UTC
+Last updated at 2025-04-18 00:30:51 UTC
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
-Delphi Form                      1              3              0            614
+Delphi Form                      1              3              0            643
+CSS                              2             25             46            200
 JSON                             4              0              0            162
 HTML                             3             25             18            156
-CSS                              2             17             33            141
+Pascal                           2             23              4            129
 XML                              1              0              0            116
-Pascal                           2             19              4            107
 JavaScript                       4              6              0             95
 YAML                             2             15             23             71
 Markdown                         1              2              2             36
 -------------------------------------------------------------------------------
-SUM:                            20             87             80           1498
+SUM:                            20             99             93           1608
 -------------------------------------------------------------------------------
-147 Files were skipped (duplicate, binary, or without source code):
-  png: 131
+148 Files were skipped (duplicate, binary, or without source code):
+  png: 132
   html: 4
   ico: 4
   cname: 1
