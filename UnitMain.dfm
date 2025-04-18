@@ -4,6 +4,7 @@ object Form1: TForm1
   CSSLibrary = cssBootstrap
   ElementClassName = 'd-flex flex-row w-100 h-100'
   ElementFont = efCSS
+  OnCreate = WebFormCreate
   OnResize = WebFormResize
   object divMain: TWebHTMLDiv
     Left = 164
@@ -21,9 +22,7 @@ object Form1: TForm1
       Top = 701
       Width = 713
       Height = 74
-      ElementClassName = 
-        'order-3 d-flex flex-row flex-wrap gap-3 my-3 justify-content-cen' +
-        'ter'
+      ElementClassName = 'order-3 d-flex flex-row flex-wrap gap-3 justify-content-center'
       ElementID = 'divBottom'
       HeightStyle = ssAuto
       WidthStyle = ssPercent
@@ -366,7 +365,7 @@ object Form1: TForm1
       Top = 128
       Width = 729
       Height = 186
-      ElementClassName = 'order-1 OrangeOctopus rounded border border-secondary'
+      ElementClassName = 'order-1 OrangeOctopus resize-bottom'
       ElementID = 'divDemo'
       WidthStyle = ssPercent
       ChildOrder = 1
@@ -379,25 +378,12 @@ object Form1: TForm1
       Top = 3
       Width = 729
       Height = 60
-      ElementClassName = 'd-flex p-1 gap-1 order-0 rounded border border-secondary'
+      ElementClassName = 'd-flex p-1 gap-1 order-0'
       ElementID = 'divTop'
       WidthStyle = ssPercent
       ElementPosition = epRelative
       ElementFont = efCSS
       Role = ''
-      object WebLabel1: TWebLabel
-        Left = 9
-        Top = 10
-        Width = 219
-        Height = 31
-        Caption = 'Welcome to  the Lanboss.ai Demo Page'
-        ElementFont = efCSS
-        ElementPosition = epRelative
-        HeightStyle = ssAuto
-        HeightPercent = 100.000000000000000000
-        WidthStyle = ssAuto
-        WidthPercent = 100.000000000000000000
-      end
       object btnLogin: TWebButton
         Left = 488
         Top = 17
@@ -449,6 +435,21 @@ object Form1: TForm1
         WidthPercent = 100.000000000000000000
         OnClick = btnLogoutClick
       end
+      object divCaption: TWebHTMLDiv
+        Left = 56
+        Top = 24
+        Width = 100
+        Height = 41
+        ElementClassName = 'd-flex p-3 align-items-center justify-content-start '
+        ElementID = 'divCaption'
+        HeightStyle = ssAuto
+        WidthStyle = ssAuto
+        ElementPosition = epRelative
+        ElementFont = efCSS
+        HTML.Strings = (
+          '<div>Demos</div>')
+        Role = ''
+      end
     end
     object divDemoButtons: TWebHTMLDiv
       Left = 72
@@ -456,8 +457,8 @@ object Form1: TForm1
       Width = 667
       Height = 266
       ElementClassName = 
-        'p-3 order-2 d-flex flex-wrap gap-3 rounded border border-seconda' +
-        'ry justify-content-center align-items-center'
+        'p-3 order-2 d-flex flex-wrap gap-3 justify-content-center align-' +
+        'items-center'
       ElementID = 'divDemos'
       HeightStyle = ssAuto
       WidthStyle = ssAuto

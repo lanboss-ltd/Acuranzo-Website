@@ -41,7 +41,6 @@ type
     divAPIBotIcon: TWebHTMLDiv;
     WebHTMLDiv2: TWebHTMLDiv;
     divTop: TWebHTMLDiv;
-    WebLabel1: TWebLabel;
     btnLogin: TWebButton;
     btnRegister: TWebButton;
     divLanboss: TWebHTMLDiv;
@@ -57,6 +56,7 @@ type
     WebButton14: TWebButton;
     WebButton15: TWebButton;
     btnLogout: TWebButton;
+    divCaption: TWebHTMLDiv;
     procedure divManagementClick(Sender: TObject);
     procedure divEducationClick(Sender: TObject);
     procedure divAPIClick(Sender: TObject);
@@ -65,6 +65,7 @@ type
     procedure btnLoginClick(Sender: TObject);
     procedure btnRegisterClick(Sender: TObject);
     procedure btnLogoutClick(Sender: TObject);
+    procedure WebFormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -74,7 +75,10 @@ type
 var
   Form1: TForm1;
 
+
 implementation
+
+uses UnitInteractJS;
 
 {$R *.dfm}
 
@@ -91,6 +95,12 @@ end;
 procedure TForm1.divManagementClick(Sender: TObject);
 begin
   window.open('https://client.acuranzo.com', '_blank');
+end;
+
+procedure TForm1.WebFormCreate(Sender: TObject);
+begin
+  InteractJS.InitializeInteractJS;
+
 end;
 
 procedure TForm1.WebFormResize(Sender: TObject);
