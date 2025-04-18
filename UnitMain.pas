@@ -42,8 +42,8 @@ type
     WebHTMLDiv2: TWebHTMLDiv;
     divTop: TWebHTMLDiv;
     WebLabel1: TWebLabel;
-    WebButton1: TWebButton;
-    WebButton2: TWebButton;
+    btnLogin: TWebButton;
+    btnRegister: TWebButton;
     divLanboss: TWebHTMLDiv;
     divDemoButtons: TWebHTMLDiv;
     WebButton6: TWebButton;
@@ -56,11 +56,15 @@ type
     WebButton13: TWebButton;
     WebButton14: TWebButton;
     WebButton15: TWebButton;
+    btnLogout: TWebButton;
     procedure divManagementClick(Sender: TObject);
     procedure divEducationClick(Sender: TObject);
     procedure divAPIClick(Sender: TObject);
     procedure divLanbossClick(Sender: TObject);
     procedure WebFormResize(Sender: TObject);
+    procedure btnLoginClick(Sender: TObject);
+    procedure btnRegisterClick(Sender: TObject);
+    procedure btnLogoutClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -103,6 +107,28 @@ begin
 
     divDemos.style.setProperty('max-width', sw+'px');
   end;
+end;
+
+procedure TForm1.btnLoginClick(Sender: TObject);
+begin
+  btnLogin.Visible := False;
+  btnRegister.Visible := False;
+  btnLogout.Visible := True;
+end;
+
+procedure TForm1.btnLogoutClick(Sender: TObject);
+begin
+  btnLogin.Visible := True;
+  btnRegister.Visible := True;
+  btnLogout.Visible := False;
+
+end;
+
+procedure TForm1.btnRegisterClick(Sender: TObject);
+begin
+  btnLogin.Visible := False;
+  btnRegister.Visible := False;
+  btnLogout.Visible := True;
 end;
 
 procedure TForm1.divAPIClick(Sender: TObject);

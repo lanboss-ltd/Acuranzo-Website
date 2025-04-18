@@ -37,7 +37,7 @@ object Form1: TForm1
         Width = 225
         Height = 60
         Cursor = crHandPoint
-        ElementClassName = 'BotBackground rounded border border-secondary'
+        ElementClassName = 'BotBackground'
         ElementID = 'btnEducation'
         ChildOrder = 2
         ElementPosition = epRelative
@@ -147,7 +147,7 @@ object Form1: TForm1
         Width = 225
         Height = 60
         Cursor = crHandPoint
-        ElementClassName = 'BotBackground rounded border border-secondary'
+        ElementClassName = 'BotBackground'
         ElementID = 'btnManagement'
         ChildOrder = 2
         ElementPosition = epRelative
@@ -257,7 +257,7 @@ object Form1: TForm1
         Width = 225
         Height = 60
         Cursor = crHandPoint
-        ElementClassName = 'BotBackground rounded border border-secondary'
+        ElementClassName = 'BotBackground'
         ElementID = 'btnAPI'
         ChildOrder = 2
         ElementPosition = epRelative
@@ -376,10 +376,10 @@ object Form1: TForm1
     end
     object divTop: TWebHTMLDiv
       Left = 32
-      Top = 10
+      Top = 3
       Width = 729
       Height = 60
-      ElementClassName = 'order-0 rounded border border-secondary bg-white'
+      ElementClassName = 'd-flex p-1 gap-1 order-0 rounded border border-secondary'
       ElementID = 'divTop'
       WidthStyle = ssPercent
       ElementPosition = epRelative
@@ -388,37 +388,66 @@ object Form1: TForm1
       object WebLabel1: TWebLabel
         Left = 9
         Top = 10
-        Width = 189
-        Height = 13
+        Width = 219
+        Height = 31
         Caption = 'Welcome to  the Lanboss.ai Demo Page'
         ElementFont = efCSS
+        ElementPosition = epRelative
         HeightStyle = ssAuto
         HeightPercent = 100.000000000000000000
+        WidthStyle = ssAuto
         WidthPercent = 100.000000000000000000
       end
-      object WebButton1: TWebButton
+      object btnLogin: TWebButton
         Left = 488
-        Top = 10
+        Top = 17
         Width = 96
         Height = 40
-        Caption = 'Login'
+        Caption = 'Login <i class="fa-duotone fa-right-to-bracket ms-2 fa-xl"></i>'
         ChildOrder = 1
-        ElementClassName = 'rounded btn btn-primary'
+        ElementClassName = 'ms-auto btn btn-primary RegButton'
         ElementFont = efCSS
+        ElementPosition = epRelative
+        HeightStyle = ssAuto
         HeightPercent = 100.000000000000000000
+        WidthStyle = ssAuto
         WidthPercent = 100.000000000000000000
+        OnClick = btnLoginClick
       end
-      object WebButton2: TWebButton
-        Left = 600
-        Top = 10
+      object btnRegister: TWebButton
+        Left = 590
+        Top = 17
         Width = 96
         Height = 40
-        Caption = 'Register'
-        ChildOrder = 1
-        ElementClassName = 'rounded btn btn-primary'
+        Caption = 'Register <i class="fa-duotone fa-address-card ms-2 fa-xl"></i>'
+        ChildOrder = 2
+        ElementClassName = 'rounded btn btn-primary RegButton'
         ElementFont = efCSS
+        ElementPosition = epRelative
+        HeightStyle = ssAuto
         HeightPercent = 100.000000000000000000
+        WidthStyle = ssAuto
         WidthPercent = 100.000000000000000000
+        OnClick = btnRegisterClick
+      end
+      object btnLogout: TWebButton
+        Left = 386
+        Top = 17
+        Width = 96
+        Height = 40
+        Caption = 
+          'Logout <i class="fa-duotone fa-right-from-bracket ms-2 fa-xl"></' +
+          'i>'
+        ChildOrder = 1
+        ElementClassName = 'ms-auto btn btn-primary RegButton'
+        ElementFont = efCSS
+        ElementPosition = epRelative
+        HeightStyle = ssAuto
+        HeightPercent = 100.000000000000000000
+        Visible = False
+        WidthStyle = ssAuto
+        WidthPercent = 100.000000000000000000
+        OnClick = btnLogoutClick
       end
     end
     object divDemoButtons: TWebHTMLDiv
