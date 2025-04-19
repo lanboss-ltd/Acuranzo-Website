@@ -18,6 +18,7 @@ body {
   --color-margin: rgb(240,240,240);
   --color-margin-shade: rgba(0,0,0,.25);
   --border-radius-button: 8px;
+  --border-radius-holder: 12px;
   --transition-time: 500ms;
 }
 
@@ -51,6 +52,7 @@ body {
   width: 100% !important;
   overflow-x: hidden;
   overflow-y: auto;
+  min-width: 350px;
 }
 
 
@@ -60,6 +62,7 @@ body {
 #divBottom {
   min-width: 260px;
   max-width: 900px;
+  border-radius: var(--border-radius-holder);
 }
 
 /* Same as logo on left */
@@ -67,15 +70,18 @@ body {
   margin-top: 12px;
   min-height: 60px;
   flex-shrink: 0;
+  border: 1px solid var(--color-orange-dark);
 }
 
 #divDemo {
-  min-height: 250px;
+  min-height: 350px;
   flex-shrink: 0;
+  border: 1px solid var(--color-orange-dark);
 }
 
 #divDemos {
   background-color: var(--color-orange-light);
+  border: 1px solid var(--color-orange-dark);
 }
 .btnDemo {
   width: 250px !important;
@@ -85,6 +91,9 @@ body {
   background-color: white;
 }
 
+#divBottom {
+  margin-bottom: 2rem;
+}
 /*
 ** Left Margin / Sidebar
 */
