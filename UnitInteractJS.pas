@@ -247,8 +247,8 @@ begin
           }
         },
         modifiers: [
-          interact.modifiers.restrictSize({
-            min: { height: 20 }
+          interact.modifiers.restrictEdges({
+            outer: 'parent'
           })
         ]
       });

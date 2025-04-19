@@ -42,18 +42,15 @@ object Form1: TForm1
         ElementPosition = epRelative
         ElementFont = efCSS
         Role = ''
+        Visible = False
         OnClick = divEducationClick
-        object divEduImage: TWebHTMLDiv
+        object divEduIcon: TWebHTMLDiv
           Left = 5
           Top = 3
           Width = 50
           Height = 50
           ChildOrder = 2
           ElementFont = efCSS
-          HTML.Strings = (
-            
-              '<img class="Octopus" width=50 height=50 src=images/oo_education.' +
-              'png>')
           Role = ''
           OnClick = divEducationClick
         end
@@ -84,7 +81,7 @@ object Form1: TForm1
               ChildOrder = 2
               ElementFont = efCSS
               HTML.Strings = (
-                'Education')
+                'EduTop')
               Role = ''
               OnClick = divEducationClick
             end
@@ -120,7 +117,7 @@ object Form1: TForm1
               ChildOrder = 2
               ElementFont = efCSS
               HTML.Strings = (
-                'Moodle')
+                'EduBot')
               Role = ''
               OnClick = divEducationClick
             end
@@ -152,6 +149,7 @@ object Form1: TForm1
         ElementPosition = epRelative
         ElementFont = efCSS
         Role = ''
+        Visible = False
         OnClick = divManagementClick
         object divMgtIcon: TWebHTMLDiv
           Left = 5
@@ -160,10 +158,6 @@ object Form1: TForm1
           Height = 50
           ChildOrder = 2
           ElementFont = efCSS
-          HTML.Strings = (
-            
-              '<img class="Acuranzo" width=50 height=50 src=images/acuranzo.png' +
-              '>')
           Role = ''
           OnClick = divManagementClick
         end
@@ -194,7 +188,7 @@ object Form1: TForm1
               ChildOrder = 2
               ElementFont = efCSS
               HTML.Strings = (
-                'Management')
+                'MgtTop')
               Role = ''
               OnClick = divManagementClick
             end
@@ -230,7 +224,7 @@ object Form1: TForm1
               ChildOrder = 2
               ElementFont = efCSS
               HTML.Strings = (
-                'Acuranzo')
+                'MgtBot')
               Role = ''
               OnClick = divManagementClick
             end
@@ -262,6 +256,7 @@ object Form1: TForm1
         ElementPosition = epRelative
         ElementFont = efCSS
         Role = ''
+        Visible = False
         OnClick = divAPIClick
         object divAPIIcon: TWebHTMLDiv
           Left = 5
@@ -271,8 +266,6 @@ object Form1: TForm1
           HeightStyle = ssAuto
           ChildOrder = 2
           ElementFont = efCSS
-          HTML.Strings = (
-            '<img class="Swagger" width=50 height=50 src=images/swagger.png>')
           Role = ''
           OnClick = divAPIClick
         end
@@ -303,7 +296,7 @@ object Form1: TForm1
               ChildOrder = 2
               ElementFont = efCSS
               HTML.Strings = (
-                'API Access')
+                'APITop')
               Role = ''
               OnClick = divAPIClick
             end
@@ -331,7 +324,7 @@ object Form1: TForm1
             Role = ''
             OnClick = divAPIClick
             object divAPIBotCaption: TWebHTMLDiv
-              Left = 0
+              Left = -4
               Top = 0
               Width = 130
               Height = 25
@@ -339,7 +332,7 @@ object Form1: TForm1
               ChildOrder = 2
               ElementFont = efCSS
               HTML.Strings = (
-                'Swagger')
+                'APIBot')
               Role = ''
               OnClick = divAPIClick
             end
@@ -360,8 +353,8 @@ object Form1: TForm1
         end
       end
     end
-    object WebHTMLDiv2: TWebHTMLDiv
-      Left = 32
+    object divDemo: TWebHTMLDiv
+      Left = 35
       Top = 128
       Width = 729
       Height = 186
@@ -372,6 +365,63 @@ object Form1: TForm1
       ElementPosition = epRelative
       ElementFont = efCSS
       Role = ''
+      object divDemoContainer: TWebHTMLDiv
+        Left = 21
+        Top = 3
+        Width = 692
+        Height = 180
+        ElementClassName = 'nointeract'
+        ElementID = 'divDemoContainer'
+        HeightStyle = ssPercent
+        WidthStyle = ssPercent
+        ChildOrder = 1
+        ElementFont = efCSS
+        Role = ''
+        object divDemoBorder: TWebHTMLDiv
+          Left = 78
+          Top = 16
+          Width = 563
+          Height = 41
+          ElementClassName = 'nointeract'
+          ElementID = 'divDemoBorder'
+          HeightStyle = ssPercent
+          WidthStyle = ssPercent
+          ChildOrder = 1
+          ElementPosition = epIgnore
+          ElementFont = efCSS
+          Role = ''
+        end
+        object divCurtains: TWebHTMLDiv
+          Left = 78
+          Top = 72
+          Width = 560
+          Height = 41
+          ElementID = 'divCurtains'
+          HeightStyle = ssPercent
+          WidthStyle = ssPercent
+          ChildOrder = 1
+          ElementPosition = epRelative
+          ElementFont = efCSS
+          Role = ''
+        end
+        object diviFrame: TWebHTMLDiv
+          Left = 78
+          Top = 119
+          Width = 560
+          Height = 40
+          ElementID = 'diviFrame'
+          HeightStyle = ssPercent
+          WidthStyle = ssPercent
+          ChildOrder = 1
+          ElementPosition = epIgnore
+          ElementFont = efCSS
+          HTML.Strings = (
+            
+              '<iframe src="https://client.acuranzo.com/lti.html?Model=Grok%202' +
+              '&Theme=Bluish&Canvas=ABCD">')
+          Role = ''
+        end
+      end
     end
     object divTop: TWebHTMLDiv
       Left = 32
@@ -380,6 +430,7 @@ object Form1: TForm1
       Height = 60
       ElementClassName = 'd-flex p-1 gap-1 order-0'
       ElementID = 'divTop'
+      HeightStyle = ssAuto
       WidthStyle = ssPercent
       ElementPosition = epRelative
       ElementFont = efCSS
@@ -436,22 +487,24 @@ object Form1: TForm1
         OnClick = btnLogoutClick
       end
       object divCaption: TWebHTMLDiv
-        Left = 56
-        Top = 24
+        Left = 24
+        Top = 3
         Width = 100
         Height = 41
-        ElementClassName = 'd-flex p-3 align-items-center justify-content-start '
+        ElementClassName = 
+          'user-select-none d-flex p-3 align-items-center justify-content-s' +
+          'tart '
         ElementID = 'divCaption'
         HeightStyle = ssAuto
         WidthStyle = ssAuto
         ElementPosition = epRelative
         ElementFont = efCSS
         HTML.Strings = (
-          '<div>Demos</div>')
+          '<div>Loading... ...Please wait</div>')
         Role = ''
       end
     end
-    object divDemoButtons: TWebHTMLDiv
+    object divDemos: TWebHTMLDiv
       Left = 72
       Top = 345
       Width = 667
@@ -466,155 +519,6 @@ object Form1: TForm1
       ElementPosition = epRelative
       ElementFont = efCSS
       Role = ''
-      object WebButton6: TWebButton
-        Left = 16
-        Top = 30
-        Width = 250
-        Height = 40
-        Caption = 'Demo'
-        ElementClassName = 'rounded btn btn-info btnDemo'
-        ElementFont = efCSS
-        ElementPosition = epRelative
-        HeightStyle = ssAuto
-        HeightPercent = 100.000000000000000000
-        WidthStyle = ssAuto
-        WidthPercent = 100.000000000000000000
-      end
-      object WebButton7: TWebButton
-        Left = 16
-        Top = 76
-        Width = 250
-        Height = 40
-        Caption = 'Demo'
-        ChildOrder = 1
-        ElementClassName = 'rounded btn btn-info btnDemo'
-        ElementFont = efCSS
-        ElementPosition = epRelative
-        HeightStyle = ssAuto
-        HeightPercent = 100.000000000000000000
-        WidthStyle = ssAuto
-        WidthPercent = 100.000000000000000000
-      end
-      object WebButton8: TWebButton
-        Left = 16
-        Top = 122
-        Width = 250
-        Height = 40
-        Caption = 'Demo'
-        ChildOrder = 2
-        ElementClassName = 'rounded btn btn-info btnDemo'
-        ElementFont = efCSS
-        ElementPosition = epRelative
-        HeightStyle = ssAuto
-        HeightPercent = 100.000000000000000000
-        WidthStyle = ssAuto
-        WidthPercent = 100.000000000000000000
-      end
-      object WebButton9: TWebButton
-        Left = 16
-        Top = 168
-        Width = 250
-        Height = 40
-        Caption = 'Demo'
-        ChildOrder = 3
-        ElementClassName = 'rounded btn btn-info btnDemo'
-        ElementFont = efCSS
-        ElementPosition = epRelative
-        HeightStyle = ssAuto
-        HeightPercent = 100.000000000000000000
-        WidthStyle = ssAuto
-        WidthPercent = 100.000000000000000000
-      end
-      object WebButton10: TWebButton
-        Left = 16
-        Top = 214
-        Width = 250
-        Height = 40
-        Caption = 'Demo'
-        ChildOrder = 4
-        ElementClassName = 'rounded btn btn-info btnDemo'
-        ElementFont = efCSS
-        ElementPosition = epRelative
-        HeightStyle = ssAuto
-        HeightPercent = 100.000000000000000000
-        WidthStyle = ssAuto
-        WidthPercent = 100.000000000000000000
-      end
-      object WebButton11: TWebButton
-        Left = 360
-        Top = 30
-        Width = 250
-        Height = 40
-        Caption = 'Demo'
-        ChildOrder = 5
-        ElementClassName = 'rounded btn btn-info btnDemo'
-        ElementFont = efCSS
-        ElementPosition = epRelative
-        HeightStyle = ssAuto
-        HeightPercent = 100.000000000000000000
-        WidthStyle = ssAuto
-        WidthPercent = 100.000000000000000000
-      end
-      object WebButton12: TWebButton
-        Left = 360
-        Top = 76
-        Width = 250
-        Height = 40
-        Caption = 'Demo'
-        ChildOrder = 1
-        ElementClassName = 'rounded btn btn-info btnDemo'
-        ElementFont = efCSS
-        ElementPosition = epRelative
-        HeightStyle = ssAuto
-        HeightPercent = 100.000000000000000000
-        WidthStyle = ssAuto
-        WidthPercent = 100.000000000000000000
-      end
-      object WebButton13: TWebButton
-        Left = 360
-        Top = 122
-        Width = 250
-        Height = 40
-        Caption = 'Demo'
-        ChildOrder = 2
-        ElementClassName = 'rounded btn btn-info btnDemo'
-        ElementFont = efCSS
-        ElementPosition = epRelative
-        HeightStyle = ssAuto
-        HeightPercent = 100.000000000000000000
-        WidthStyle = ssAuto
-        WidthPercent = 100.000000000000000000
-      end
-      object WebButton14: TWebButton
-        Left = 360
-        Top = 168
-        Width = 250
-        Height = 40
-        Caption = 'Demo'
-        ChildOrder = 3
-        ElementClassName = 'rounded btn btn-info btnDemo'
-        ElementFont = efCSS
-        ElementPosition = epRelative
-        HeightStyle = ssAuto
-        HeightPercent = 100.000000000000000000
-        WidthStyle = ssAuto
-        WidthPercent = 100.000000000000000000
-      end
-      object WebButton15: TWebButton
-        Left = 360
-        Top = 214
-        Width = 250
-        Height = 40
-        Caption = 'Demo'
-        ChildOrder = 4
-        ElementClassName = 'rounded btn btn-info btnDemo'
-        ElementFont = efCSS
-        ElementPosition = epRelative
-        HeightStyle = ssAuto
-        HeightPercent = 100.000000000000000000
-        WidthStyle = ssAuto
-        WidthPercent = 100.000000000000000000
-      end
     end
   end
   object divMargin: TWebHTMLDiv
@@ -643,5 +547,20 @@ object Form1: TForm1
       Role = ''
       OnClick = divLanbossClick
     end
+  end
+  object XDataConn: TXDataWebConnection
+    Left = 64
+    Top = 186
+  end
+  object tmrStartup: TWebTimer
+    Enabled = False
+    Interval = 10
+    OnTimer = tmrStartupTimer
+    Left = 64
+    Top = 298
+  end
+  object WebHttpRequest1: TWebHttpRequest
+    Left = 48
+    Top = 426
   end
 end
