@@ -19,11 +19,14 @@ body {
   --color-margin-shade: rgba(0,0,0,.25);
   --border-radius-button: 8px;
   --border-radius-holder: 12px;
+  --border-radius-frame: 14px;
   --transition-time: 500ms;
-}
-
-.OrangeOctopus {
-  background-color: var(--color-orange);
+  --background-curtains: repeating-linear-gradient(90deg,
+      var(--color-orange),
+      var(--color-orange-dark) 30px,
+      var(--color-orange)      50px,
+      var(--color-orange)      60px
+    );
 }
 
 .RegButton {
@@ -62,7 +65,6 @@ body {
 #divBottom {
   min-width: 260px;
   max-width: 900px;
-  border-radius: var(--border-radius-holder);
 }
 
 /* Same as logo on left */
@@ -71,25 +73,77 @@ body {
   min-height: 60px;
   flex-shrink: 0;
   border: 1px solid var(--color-orange-dark);
+  border-radius: var(--border-radius-holder);
+  background-color: var(--color-orange-light);
 }
 
 #divDemo {
   min-height: 350px;
   flex-shrink: 0;
+  overflow: hidden;
+}
+#divDemoContainer {
+   position: absolute !important;
+   top: 0px !important;
+   bottom: 12px !important;
+   left: 0px !important;
+   right: 0px !important;
+   width: unset !important;
+   height: unset !important;
+}
+#divDemoBorder {
+  position: absolute;
+  display: block;
+  top: 0px !important;
+  left: 0px  !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden;
   border: 1px solid var(--color-orange-dark);
+  border-radius: var(--border-radius-frame);
+  z-index: 3;
+}
+#divCurtains {
+  position: absolute;
+  display: block;
+  top: 0px !important;
+  left: 0px  !important;
+  width: 100%  !important;
+  height: 100% !important;
+  background: var(--background-curtains);
+  border-radius: var(--border-radius-frame);
+  transition: all var(--transition-time);
+  overflow: hidden;
+  z-index: 2;
+}
+
+#diviFrame {
+  position: absolute;
+  display: block;
+  top: 0px !important;
+  left: 0px  !important;
+  width: 100%  !important;
+  height: 100% !important;
+  border-radius: var(--border-radius-frame);
+  overflow: hidden;
+  z-index: 1;
+}
+#diviFrame > iframe {
+  position: absolute;
+  display: block;
+  top: 0px !important;
+  left: 0px  !important;
+  width: 100%  !important;
+  height: 100% !important;
 }
 
 #divDemos {
+  margin-top: -12px;
   background-color: var(--color-orange-light);
   border: 1px solid var(--color-orange-dark);
+  border-radius: var(--border-radius-holder);
 }
-.btnDemo {
-  width: 250px !important;
-  height: 60px !important;
-  border: 1px solid var(--color-orange-dark) !important;
-  border-radius: var(--border-radius-button) !important;
-  background-color: white;
-}
+
 
 #divBottom {
   margin-bottom: 2rem;
@@ -102,6 +156,55 @@ body {
   box-shadow: inset -13px 0 20px -13px var(--color-margin-shade);
   width: 120px !important;
   flex-shrink: 0;
+}
+
+
+/*
+** Demo Buttons
+*/
+.btnDemo {
+  width: 250px !important;
+  height: 60px !important;
+  border: 1px solid var(--color-orange-dark) !important;
+  border-radius: var(--border-radius-button) !important;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all var(--transition-time);
+}
+.btnDemo:hover {
+  background-color: var(--color-orange-dark);
+  --color-text-highlight: white;
+}
+.btnDemo > img {
+  width: 50px;
+  height: 50px;
+  margin-left: 5px;
+  pointer-events: none;
+}
+.btnDemo .caption {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  pointer-events: none;
+}
+.btnDemo .caption-top {
+  font-size: 12px;
+  color: black;
+  white-space: nowrap;
+}
+.btnDemo .caption-bottom {
+  font-size: 10px;
+  color: var(--color-text-highlight);
+  white-space: nowrap;
+  transition: all var(--transition-time);
+}
+.btnDemo.selected {
+  outline: 4px solid var(--color-orange-dark);
+  outline-offset: -1px;
 }
 
 /*
