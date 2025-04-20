@@ -8,7 +8,7 @@ object Form1: TForm1
   OnResize = WebFormResize
   object divMain: TWebHTMLDiv
     Left = 164
-    Top = 32
+    Top = 8
     Width = 801
     Height = 801
     ElementClassName = 'px-3 gap-3 d-flex flex-column h-100 w-100 align-items-center'
@@ -22,11 +22,11 @@ object Form1: TForm1
       Top = 701
       Width = 713
       Height = 74
-      ElementClassName = 'order-3 d-flex flex-row flex-wrap gap-3 justify-content-center'
+      ElementClassName = 'order-4 d-flex flex-row flex-wrap gap-3 justify-content-center'
       ElementID = 'divBottom'
       HeightStyle = ssAuto
       WidthStyle = ssPercent
-      ChildOrder = 3
+      ChildOrder = 4
       ElementPosition = epRelative
       ElementFont = efCSS
       Role = ''
@@ -415,10 +415,6 @@ object Form1: TForm1
           ChildOrder = 1
           ElementPosition = epIgnore
           ElementFont = efCSS
-          HTML.Strings = (
-            
-              '<iframe src="https://client.acuranzo.com/lti.html?Model=Grok%202' +
-              '&Theme=Bluish&Canvas=ABCD">')
           Role = ''
         end
       end
@@ -506,7 +502,7 @@ object Form1: TForm1
     end
     object divDemos: TWebHTMLDiv
       Left = 72
-      Top = 345
+      Top = 352
       Width = 667
       Height = 266
       ElementClassName = 
@@ -519,6 +515,71 @@ object Form1: TForm1
       ElementPosition = epRelative
       ElementFont = efCSS
       Role = ''
+    end
+    object divControls: TWebHTMLDiv
+      Left = 225
+      Top = 624
+      Width = 385
+      Height = 49
+      ElementClassName = 'order-3 d-flex flex-row flex-shrink-0'
+      ElementID = 'divControls'
+      HeightStyle = ssAuto
+      WidthStyle = ssAuto
+      ChildOrder = 3
+      ElementPosition = epRelative
+      ElementFont = efCSS
+      Role = ''
+      object divControlTop: TWebHTMLDiv
+        Left = 43
+        Top = 3
+        Width = 78
+        Height = 43
+        ElementClassName = 'selected'
+        ElementID = 'divControlTop'
+        HeightStyle = ssAuto
+        WidthStyle = ssAuto
+        ChildOrder = 1
+        ElementPosition = epRelative
+        ElementFont = efCSS
+        HTML.Strings = (
+          'Open at Top <i class="fa-solid fa-arrow-up fa-lg ms-2"></i>')
+        Role = ''
+        OnClick = divControlTopClick
+      end
+      object divControlPop: TWebHTMLDiv
+        Left = 155
+        Top = 0
+        Width = 78
+        Height = 43
+        ElementID = 'divControlPop'
+        HeightStyle = ssAuto
+        WidthStyle = ssAuto
+        ChildOrder = 2
+        ElementPosition = epRelative
+        ElementFont = efCSS
+        HTML.Strings = (
+          'Popup <i class="fa-duotone fa-send-backward fa-lg ms-2"></i>')
+        Role = ''
+        OnClick = divControlPopClick
+      end
+      object divControlTab: TWebHTMLDiv
+        Left = 255
+        Top = 3
+        Width = 78
+        Height = 43
+        ElementID = 'divControlTab'
+        HeightStyle = ssAuto
+        WidthStyle = ssAuto
+        ChildOrder = 3
+        ElementPosition = epRelative
+        ElementFont = efCSS
+        HTML.Strings = (
+          
+            'Tab <i class="fa-duotone fa-arrow-up-right-from-square fa-lg ms-' +
+            '2"></i>')
+        Role = ''
+        OnClick = divControlTabClick
+      end
     end
   end
   object divMargin: TWebHTMLDiv

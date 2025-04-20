@@ -75,6 +75,10 @@ type
     divDemoBorder: TWebHTMLDiv;
     divCurtains: TWebHTMLDiv;
     diviFrame: TWebHTMLDiv;
+    divControls: TWebHTMLDiv;
+    divControlTop: TWebHTMLDiv;
+    divControlPop: TWebHTMLDiv;
+    divControlTab: TWebHTMLDiv;
     procedure divManagementClick(Sender: TObject);
     procedure divEducationClick(Sender: TObject);
     procedure divAPIClick(Sender: TObject);
@@ -91,6 +95,9 @@ type
     [async] procedure tmrStartupTimer(Sender: TObject);
     [async] procedure btnDemoClick(demoid: String);
     [async] procedure LoadDemos;
+    procedure divControlTopClick(Sender: TObject);
+    procedure divControlPopClick(Sender: TObject);
+    procedure divControlTabClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -103,6 +110,7 @@ type
     APP_URL_API: String;    // Link to use for API Button
 
     APP_Mode: String;  // Inline, New Page, Float
+    APP_Popups: Integer;  // Keep track of popups
 
     XDataConnected: Boolean;
   end;
@@ -122,6 +130,8 @@ procedure TForm1.WebFormCreate(Sender: TObject);
 begin
   InteractJS.InitializeInteractJS;
   XDataConnected := False;
+  APP_Mode := 'Top';
+  App_Popups := 0;
 
   {$IFNDEF WIN32 } asm {
     window.sleep = async function(msecs) { return new Promise((resolve) => setTimeout(resolve, parseInt(msecs) || 1000)); }
@@ -129,6 +139,22 @@ begin
   } end; {$ENDIF}
 
   tmrStartup.Enabled := True;
+end;
+
+procedure TForm1.tmrStartupTimer(Sender: TObject);
+begin
+  tmrStartup.Enabled := False;
+  Await(GetConfiguration);
+  Await(GetServerInfo);
+  Await(LoadDemos);
+
+  {$IFNDEF WIN32 } asm {
+    var btns = document.querySelectorAll('.btnDemo.order-1');
+    if (btns.length == 1) {
+      btns[0].click();
+    }
+  } end; {$ENDIF}
+
 end;
 
 procedure TForm1.divEducationClick(Sender: TObject);
@@ -147,6 +173,36 @@ procedure TForm1.divAPIClick(Sender: TObject);
 begin
   if (APP_URL_API <> '')
   then window.open(APP_URL_API, '_blank');
+end;
+
+procedure TForm1.divControlPopClick(Sender: TObject);
+begin
+  APP_Mode := 'Pop';
+  {$IFNDEF WIN32 } asm {
+    divControlTop.classList.remove('selected');
+    divControlPop.classList.add('selected');
+    divControlTab.classList.remove('selected');
+  } end; {$ENDIF}
+end;
+
+procedure TForm1.divControlTabClick(Sender: TObject);
+begin
+  APP_Mode := 'Tab';
+  {$IFNDEF WIN32 } asm {
+    divControlTop.classList.remove('selected');
+    divControlPop.classList.remove('selected');
+    divControlTab.classList.add('selected');
+  } end; {$ENDIF}
+end;
+
+procedure TForm1.divControlTopClick(Sender: TObject);
+begin
+  APP_Mode := 'Top';
+  {$IFNDEF WIN32 } asm {
+    divControlTop.classList.add('selected');
+    divControlPop.classList.remove('selected');
+    divControlTab.classList.remove('selected');
+  } end; {$ENDIF}
 end;
 
 procedure TForm1.divLanbossClick(Sender: TObject);
@@ -173,19 +229,52 @@ end;
 procedure TForm1.btnDemoClick(demoid: String);
 begin
   {$IFNDEF WIN32 } asm {
-    divCurtains.style.setProperty('height','100%','important');
-
-    console.log(demoid);
     var demos = document.querySelectorAll('.btnDemo');
     for (var i = 0; i < demos.length; i++) {
       demos[i].classList.remove('selected');
     }
 
-    var demo = document.getElementById(demoid);
-    demo.classList.add('selected');
+    var btn = document.getElementById(demoid);
+    var model = Lookups[38][btn.getAttribute('demo')].collection;
+    var demo = Lookups[38][btn.getAttribute('demo')].collection.Demo;
+    btn.classList.add('selected');
 
-    await window.sleep(500);
-    divCurtains.style.setProperty('height','0%','important');
+    var URL = "https://client.acuranzo.com/lti.html?Model="+model.Name+"&Theme=Bluish&Canvas=ABCD";
+
+    if (this.APP_Mode == "Top") {
+      divCurtains.style.setProperty('height','100%','important');
+      await window.sleep(500);
+      diviFrame.innerHTML = "<iframe src='"+URL+"'>";
+      await window.sleep(500);
+      divCurtains.style.setProperty('height','0%','important');
+    } else if (this.APP_Mode == "Pop") {
+      this.APP_Popups = this.APP_Popups + 1;
+      var popup = document.createElement('div');
+      popup.id = "popup"+this.APP_Popups;
+      popup.classList.add('resize-drag');
+      popup.classList.add('popup');
+      popup.style.setProperty('display','flex');
+      popup.style.setProperty('display','flex-row');
+      popup.style.setProperty('position','absolute');
+      popup.style.setProperty('flex','1 1 auto');
+      popup.style.setProperty('top', '50%');  +
+      popup.style.setProperty('left','50%');
+      popup.style.setProperty('width','45%');
+      popup.style.setProperty('height','45%');
+      popup.style.setProperty('z-index',10 + this.APP_Popups);
+
+      var popmenu = "<div class='popmenu nointeract'>"+
+                      "<i id=popupX"+this.APP_Popups+" class='fa-solid fa-xmark'></i>"+
+                      "<i id=popupM"+this.APP_Popups+" class='fa-solid fa-bars popupM'></i>"+
+                    "</div>";
+
+      popup.innerHTML = popmenu+"<div><iframe src='"+URL+"'></div>";
+      document.body.appendChild(popup);
+
+    } else if (this.APP_Mode == "Tab") {
+      window.open(URL, "_blank");
+    }
+
   } end; {$ENDIF}
 
 end;
@@ -299,14 +388,6 @@ begin
       end;
     end;
   end;
-end;
-
-procedure TForm1.tmrStartupTimer(Sender: TObject);
-begin
-  tmrStartup.Enabled := False;
-  Await(GetConfiguration);
-  Await(GetServerInfo);
-  Await(LoadDemos);
 end;
 
 procedure TForm1.XDataConnect;
@@ -425,6 +506,7 @@ begin
           var btn = document.createElement('div');
 
           btn.id = 'demo'+i;
+          btn.setAttribute('demo',i);
           btn.classList.add('btnDemo');
           btn.classList.add('order-'+demo.Order);
           btn.innerHTML = model.Icon+'<div class="caption"><div class="caption-top">'+demo.Title+'</div><div class="caption-bottom">'+demo.SubTitle+'</div></div>';

@@ -36,7 +36,7 @@ uses UnitMain;
 procedure TInteractJS.InitializeInteractJS;
 begin
 
-  {$IFNDEF WIN32} asm {
+  {$IFNDEF WIN32 } asm {
 
     window.rptSectionEndListener = function(event) {
       var target = event.target;
@@ -120,19 +120,19 @@ begin
 
     window.extendStartListener = function(event) {
       var target = event.target;
-      target.style.setProperty('transition','none');
+//      target.style.setProperty('transition','none');
     }
 
     window.extendEndListener = function(event) {
       var target = event.target;
-      target.style.setProperty('transition', 'var(--ACZ-transition-quick)');
+  //    target.style.setProperty('transition', 'var(--ACZ-transition-quick)');
     }
 
     interact('.resize-drag')
       .resizable({
         // resize from all edges and corners
-        edges: { left: true, right: true, bottom: false, top: false },
-
+        edges: { left: true, right: true, bottom: true, top: true },
+        margin: 20,
         listeners: {
           move (event) {
             var target = event.target
@@ -151,14 +151,20 @@ begin
 
             target.setAttribute('data-x', x)
             target.setAttribute('data-y', y)
+          },
+          start (event) {
+            event.target.style.setProperty('pointer-events','none');
+            setTimeout(function() {
+              event.target.style.removeProperty('pointer-events');
+            },3000);
           }
         },
+        ignoreFrom: '.nointeract',
         modifiers: [
           // keep the edges inside the parent
           interact.modifiers.restrictEdges({
-            outer: 'parent'
+//            outer: 'parent'
           }),
-
           // minimum size
           interact.modifiers.restrictSize({
   //          min: { width: 200, height: 50 }
@@ -168,15 +174,16 @@ begin
 //        inertia: true
       })
       .draggable({
-        listeners: { move: window.dragMoveListener },
+          margin: 20,
+//        listeners: { move: window.dragMoveListener },
 //        inertia: true,
-        ignoreFrom: '.nointeract',
-        modifiers: [
-          interact.modifiers.restrictRect({
-            restriction: 'parent',
-            endOnly: true
-          })
-        ]
+//        allowFrom: '.popmenu',
+//        modifiers: [
+//          interact.modifiers.restrictRect({
+//           restriction: 'parent',
+//            endOnly: true
+//          })
+//        ]
       })
       .on('resizestart', extendStartListener)
       .on('resizeend', extendEndListener)
@@ -305,7 +312,6 @@ begin
           interact.modifiers.restrictEdges({
             outer: 'parent'
           }),
-
           // minimum size
           interact.modifiers.restrictSize({
   //          min: { width: 300, height: 300 }
