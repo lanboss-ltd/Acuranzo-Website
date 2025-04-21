@@ -5,34 +5,34 @@ This repository contains the public-facing https://www.acuranzo.com website code
 [![Count Lines of Code](https://github.com/lanboss-ltd/Acuranzo-Website/actions/workflows/main.yml/badge.svg)](https://github.com/lanboss-ltd/Acuranzo-Website/actions/workflows/main.yml)
 <!--CLOC-START -->
 ```
-Last updated at 2025-04-20 06:36:52 UTC
+Last updated at 2025-04-21 20:57:20 UTC
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
 Delphi Form                      2              2              0            630
-CSS                              2             42             58            534
 Pascal                           3            156            300            482
-JSON                             5              0              0            187
+CSS                              1             26             32            316
+JSON                             6              0              0            213
 HTML                             3             27             20            158
 XML                              1              0              0            119
-JavaScript                       4              6              0             95
+JavaScript                       3              6              0             94
 YAML                             2             15             23             71
 Markdown                         1              2              2             36
 -------------------------------------------------------------------------------
-SUM:                            23            250            403           2312
+SUM:                            22            234            377           2119
 -------------------------------------------------------------------------------
-188 Files were skipped (duplicate, binary, or without source code):
-  png: 171
+193 Files were skipped (duplicate, binary, or without source code):
+  png: 174
   html: 4
   ico: 4
+  css: 2
+  js: 2
   json: 2
   cname: 1
-  css: 1
   dproj: 1
   dsk: 1
   gitignore: 1
   identcache: 1
-  js: 1
 ```
 <!--CLOC-END-->
 
