@@ -270,6 +270,7 @@ begin
     var btn = document.getElementById(demoid);
     var model = Lookups[38][btn.getAttribute('demo')].collection;
     var demo = Lookups[38][btn.getAttribute('demo')].collection.Demo;
+    var key = btn.getAttribute('demo');
     btn.classList.add('selected');
 
     if (demo.Options) {
@@ -290,7 +291,7 @@ begin
     }
 
     var URL = this.APP_LTI_URL;
-    URL += '?Model='+model.Name;
+    URL += '?Model='+key;
     URL += '&Theme='+(demo.Theme || "Bluish");
     URL += '&Canvas=DEMO';
     URL += '&Config='+Config;
@@ -499,6 +500,8 @@ begin
       XDataConn.URL := APP_Server_URL;
     end;
 
+    console.log('Contacting server at: '+XDataConn.URL);
+
     // Try and establish a connection to the server
     try
       await(XDataConn.OpenAsync);
@@ -508,6 +511,13 @@ begin
         XDataConnected := False;
       end;
     end;
+
+   console.log('Contacting server at: '+XDataConn.URL);
+   if XDataConnected
+   then console.log('Connection successful')
+   else console.log('connection failed');
+
+
   end;
 end;
 
@@ -598,9 +608,10 @@ begin
           var model = Lookups[38][i].collection;
           var demo = Lookups[38][i].collection.Demo;
           var btn = document.createElement('div');
+          var key = Lookups[38][i].key_idx;
 
-          btn.id = 'demo'+i;
-          btn.setAttribute('demo',i);
+          btn.id = 'demo'+key;
+          btn.setAttribute('demo',key);
           btn.classList.add('btnDemo');
           btn.classList.add('order-'+demo.Order);
           btn.innerHTML = model.Icon+'<div class="caption"><div class="caption-top">'+demo.Title+'</div><div class="caption-bottom">'+demo.SubTitle+'</div></div>';
