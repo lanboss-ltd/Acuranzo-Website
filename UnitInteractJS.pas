@@ -128,7 +128,7 @@ begin
   //    target.style.setProperty('transition', 'var(--ACZ-transition-quick)');
     }
 
-    interact('.resize-drag')
+    interact('.resize')
       .resizable({
         // resize from all edges and corners
         edges: { left: true, right: true, bottom: true, top: true },
@@ -172,18 +172,27 @@ begin
         ]
 
 //        inertia: true
-      })
+      });
+
+    interact('.drag')
       .draggable({
-          margin: 20,
-//        listeners: { move: window.dragMoveListener },
-//        inertia: true,
-//        allowFrom: '.popmenu',
-//        modifiers: [
-//          interact.modifiers.restrictRect({
-//           restriction: 'parent',
-//            endOnly: true
-//          })
-//        ]
+        listeners: {
+          move: window.dragMoveListener,
+          start (event) {
+            event.target.style.setProperty('pointer-events','none');
+            setTimeout(function() {
+              event.target.style.removeProperty('pointer-events');
+            },3000);
+          }
+        },
+        inertia: true,
+        allowFrom: '.popmenu',
+        modifiers: [
+          interact.modifiers.restrictRect({
+           restriction: 'parent',
+            endOnly: true
+          })
+        ]
       })
       .on('resizestart', extendStartListener)
       .on('resizeend', extendEndListener)
