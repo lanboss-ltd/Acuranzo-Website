@@ -35,6 +35,7 @@ jobs:
     # Deploy TMS WEB Core project
     - run: cp -R TMSWeb/Release/* docs
     - run: cp docs/Acuranzo.html docs/index.html    
+    - run: cp demo_configuration.json docs
     
     # Copy the new cloc.txt contents into the README.md file at the appropriate spot
     - run: csplit README.md /\<\!--CLOC/ {1}
