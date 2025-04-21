@@ -1,7 +1,7 @@
 {
   "Server":"http://localhost:12345/tms/xdata",
   "LTI":"https://client.acuranzo.com/lti.html",
-  "Title": "Demos and Tools",
+  "Title": "Demos & Tools",
   "Education": {
     "Icon":"<img class=\"Octopus\" width=50 height=50 src=images/oo_education.png>",
     "Title": "Education",
