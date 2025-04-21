@@ -275,11 +275,17 @@ body {
 .btnDemo > i,
 .btnDemo > svg,
 .btnDemo > img {
+  transition: all var(--transition-time);
   width: 50px;
   height: 50px;
   margin-left: 5px;
   pointer-events: none;
+  filter: drop-shadow(1px 1px 1px white)
+          drop-shadow(1px -1px 1px white)
+          drop-shadow(-1px 1px 1px white)
+          drop-shadow(-1px -1px 1px white);
 }
+
 .btnDemo .caption {
   display: flex;
   flex-direction: column;
@@ -300,7 +306,6 @@ body {
 .btnDemo.selected {
   outline: 4px solid var(--color-orange-dark);
   outline-offset: 1px;
-  transition: outline 0s;
 }
 
 /*
@@ -348,10 +353,24 @@ body {
   transition: all var(--transition-time);
 }
 img.Octopus {
-}
+  transition: all var(--transition-time);
+  filter: drop-shadow(1px 1px 1px white)
+          drop-shadow(1px -1px 1px white)
+          drop-shadow(-1px 1px 1px white)
+          drop-shadow(-1px -1px 1px white);}
 img.Acuranzo {
+  transition: all var(--transition-time);
+  filter: drop-shadow(1px 1px 1px white)
+          drop-shadow(1px -1px 1px white)
+          drop-shadow(-1px 1px 1px white)
+          drop-shadow(-1px -1px 1px white);
 }
 img.Swagger {
+  transition: all var(--transition-time);
+  filter: drop-shadow(1px 1px 1px white)
+          drop-shadow(1px -1px 1px white)
+          drop-shadow(-1px 1px 1px white)
+          drop-shadow(-1px -1px 1px white);
 }
 
 
