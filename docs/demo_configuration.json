@@ -1,5 +1,5 @@
 {
-  "Server":"https://xdata.acuranzo.com:12345/tms/xdata",
+  "Server":"https://carnival.500foods.com:44944/acuranzo",
   "LTI":"https://client.acuranzo.com/lti.html",
   "Title": "Demos & Tools",
   "Education": {
