@@ -1,0 +1,26 @@
+{
+  "Server":"http://localhost:12345/tms/xdata",
+  "LTI":"https://client.acuranzo.com/lti.html",
+  "Title": "Demos & Tools",
+  "Education": {
+    "Icon":"<img class=\"Octopus\" width=50 height=50 src=images/oo_education.png>",
+    "Title": "Education",
+    "SubTitle":"Moodle",
+    "Link":"https://lms.lanbuzz.com",
+    "Enabled":true
+  },
+  "Management": {
+    "Icon":"<img class=\"Acuranzo\" width=50 height=50 src=images/acuranzo.png>",
+    "Title": "Management",
+    "SubTitle":"Acuranzo",
+    "Link":"https://client.acuranzo.com",
+    "Enabled":true
+  },
+  "API": {
+    "Icon":"<img class=\"Swagger\" width=50 height=50 src=images/swagger.png>",
+    "Title": "API Access",
+    "SubTitle":"Swagger",
+    "Link":"https://client.acuranzo.com/swagger",
+    "Enabled":true
+  }
+}
