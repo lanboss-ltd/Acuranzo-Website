@@ -1,5 +1,5 @@
 {
-  "Server":"http://localhost:12345/tms/xdata",
+  "Server":"https://xdata.acuranzo.com:12345/tms/xdata",
   "LTI":"https://client.acuranzo.com/lti.html",
   "Title": "Demos & Tools",
   "Education": {
