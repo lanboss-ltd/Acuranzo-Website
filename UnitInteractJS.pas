@@ -264,6 +264,12 @@ begin
             var target = event.target
             var scale = target.getBoundingClientRect().height / target.offsetHeight
             target.style.height = (target.offsetHeight + (event.dy / scale)) +'px'
+          },
+          start (event) {
+            diviFrame.style.setProperty('pointer-events','none');
+            setTimeout(function() {
+              diviFrame.style.removeProperty('pointer-events');
+            },3000);
           }
         },
         modifiers: [
