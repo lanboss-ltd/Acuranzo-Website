@@ -21,7 +21,7 @@
     "Icon":"<img class=\"Swagger\" width=50 height=50 src=images/swagger.png>",
     "Title": "API Access",
     "SubTitle":"Swagger",
-    "Link":"https://client.acuranzo.com/swagger",
+    "Link":"https://carnival.500foods.com:44944/acuranzo/swaggerui",
     "Enabled":true
   }
 }
