@@ -297,7 +297,7 @@ end;
 procedure TForm1.WebFormResize(Sender: TObject);
 begin
 
-  asm
+  {$IFNDEF WIN32 } asm {
     var pw = divMain.offsetWidth;  // parent width
     var sw = 292;
 
@@ -308,14 +308,30 @@ begin
 
     divDemos.style.setProperty('max-width', sw+'px');
 
-    // Hide margin if no space
-    if (document.body.offsetWidth < 470) {
-      divMargin.style.setProperty('width','0px','important')
-    } else {
-      divMargin.style.setProperty('width','120px','important')
+    function isInIframe() {
+      try {
+        return window !== window.top;
+      } catch (e) {
+        // Cross-origin iframes may throw an error when accessing window.top
+        return true;
+      }
     }
 
-  end;
+      // Show sidebar if not in iFrame
+    if (!isInIframe()) {
+      divMargin.style.setProperty('width','120px','important');
+      setTimeout(function(){ divMargin.style.setProperty('transition','all var(--transition-time'); },2000);
+
+      // Hide margin if no space
+      if (document.body.offsetWidth < 470) {
+        divMargin.style.setProperty('width','0px','important')
+      } else {
+        divMargin.style.setProperty('width','120px','important')
+      }
+    }
+
+  } end; {$ENDIF}
+
 end;
 
 procedure TForm1.btnCancelRegisterClick(Sender: TObject);
