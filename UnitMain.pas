@@ -262,16 +262,12 @@ begin
   Config := '';
 
   {$IFNDEF WIN32 } asm {
-    var demos = document.querySelectorAll('.btnDemo');
-    for (var i = 0; i < demos.length; i++) {
-      demos[i].classList.remove('selected');
-    }
 
     var btn = document.getElementById(demoid);
     var model = Lookups[38][btn.getAttribute('demo')].collection;
     var demo = Lookups[38][btn.getAttribute('demo')].collection.Demo;
-    var key = btn.getAttribute('demo');
-    btn.classList.add('selected');
+    var key = Lookups[38][btn.getAttribute('demo')].key_idx;
+    var rounding = demo.Rounding;
 
     if (demo.Options) {
       if (demo.Options["B: Banner Message"] === true)  { Config += "B"; }
@@ -297,11 +293,24 @@ begin
     URL += '&Config='+Config;
 
     if (this.APP_Mode == "Top") {
+      var demos = document.querySelectorAll('.btnDemo');
+      for (var i = 0; i < demos.length; i++) {
+        demos[i].classList.remove('selected');
+      }
+      btn.classList.add('selected');
+
       divCurtains.style.setProperty('height','100%','important');
       await window.sleep(500);
+
+      divDemoBorder.style.setProperty('border-radius', rounding);
+      divCurtains.style.setProperty('border-radius', rounding);
+      diviFrame.style.setProperty('border-radius', rounding);
+
       diviFrame.innerHTML = "<iframe src='"+URL+"'>";
       await window.sleep(500);
       divCurtains.style.setProperty('height','0%','important');
+
+
     } else if (this.APP_Mode == "Pop") {
       this.APP_Popups = this.APP_Popups + 1;
 
@@ -342,6 +351,9 @@ begin
       popup.appendChild(popmenu);
       popmenu.appendChild(popmenuX);
       popmenu.appendChild(popmenuM);
+
+      popup.firstElementChild.firstElementChild.style.setProperty('border-radius', rounding);
+
 
     } else if (this.APP_Mode == "Tab") {
       window.open(URL, "_blank");
@@ -611,7 +623,7 @@ begin
           var key = Lookups[38][i].key_idx;
 
           btn.id = 'demo'+key;
-          btn.setAttribute('demo',key);
+          btn.setAttribute('demo',i);
           btn.classList.add('btnDemo');
           btn.classList.add('order-'+demo.Order);
           btn.innerHTML = model.Icon+'<div class="caption"><div class="caption-top">'+demo.Title+'</div><div class="caption-bottom">'+demo.SubTitle+'</div></div>';
