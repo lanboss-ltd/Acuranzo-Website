@@ -154,8 +154,10 @@ begin
           },
           start (event) {
             event.target.style.setProperty('pointer-events','none');
+            divMask.style.setProperty('display','block');
             setTimeout(function() {
               event.target.style.removeProperty('pointer-events');
+              divMask.style.setProperty('display','none');
             },3000);
           }
         },
@@ -180,8 +182,10 @@ begin
           move: window.dragMoveListener,
           start (event) {
             event.target.style.setProperty('pointer-events','none');
-            setTimeout(function() {
+            divMask.style.setProperty('display','block');
+          setTimeout(function() {
               event.target.style.removeProperty('pointer-events');
+              divMask.style.setProperty('display','none');
             },3000);
           }
         },

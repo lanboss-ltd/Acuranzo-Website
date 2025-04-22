@@ -609,6 +609,18 @@ object Form1: TForm1
       OnClick = divLanbossClick
     end
   end
+  object divMask: TWebHTMLDiv
+    Left = 8
+    Top = 775
+    Width = 100
+    Height = 41
+    ElementID = 'divMask'
+    HeightStyle = ssPercent
+    WidthStyle = ssPercent
+    ChildOrder = 2
+    ElementFont = efCSS
+    Role = ''
+  end
   object XDataConn: TXDataWebConnection
     Left = 64
     Top = 186

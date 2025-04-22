@@ -79,6 +79,7 @@ type
     divControlTop: TWebHTMLDiv;
     divControlPop: TWebHTMLDiv;
     divControlTab: TWebHTMLDiv;
+    divMask: TWebHTMLDiv;
     procedure divManagementClick(Sender: TObject);
     procedure divEducationClick(Sender: TObject);
     procedure divAPIClick(Sender: TObject);
@@ -163,6 +164,7 @@ begin
       setTimeout(function(){ divMargin.style.setProperty('transition','all var(--transition-time'); },2000);
     }
 
+
   } end; {$ENDIF}
 
   Await(GetConfiguration);
@@ -170,7 +172,7 @@ begin
   Await(LoadDemos);
 
   {$IFNDEF WIN32 } asm {
-    var btns = document.querySelectorAll('.btnDemo.order-1');
+      var btns = document.querySelectorAll('.btnDemo.order-1');
     if (btns.length == 1) {
       btns[0].click();
     }
@@ -512,8 +514,6 @@ begin
       XDataConn.URL := APP_Server_URL;
     end;
 
-    console.log('Contacting server at: '+XDataConn.URL);
-
     // Try and establish a connection to the server
     try
       await(XDataConn.OpenAsync);
@@ -524,12 +524,6 @@ begin
       end;
     end;
 
-   console.log('Contacting server at: '+XDataConn.URL);
-   if XDataConnected
-   then console.log('Connection successful')
-   else console.log('connection failed');
-
-
   end;
 end;
 
@@ -538,6 +532,7 @@ var
   ConfigResponse: TJSXMLHttpRequest;
   ConfigData: TJSONObject;
   ConfigURL: String;
+  FavIcon: String;
 begin
 
   // Figure out what our server connection might be
@@ -594,6 +589,17 @@ begin
       divAPIIcon.HTML.Text       := ((ConfigData.GetValue('API') as TJSONObject).GetValue('Icon') as TJSONString).Value;
       APP_URL_API                := ((ConfigData.GetValue('API') as TJSONObject).GetValue('Link') as TJSONString).Value;
       divAPI.Visible             := ((ConfigData.GetValue('API') as TJSONObject).GetValue('Enabled') as TJSONBool).AsBoolean;
+
+
+      // Set FavIcon
+      FavIcon := (ConfigData.GetValue('FavIcon') as TJSONString).Value;
+      {$IFNDEF WIN32 } asm {
+        let link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+        link.type = 'image/x-icon';
+        link.rel = 'shortcut icon';
+        link.href = FavIcon;
+        document.head.appendChild(link);
+      } end; {$ENDIF}
 
 
     end;
