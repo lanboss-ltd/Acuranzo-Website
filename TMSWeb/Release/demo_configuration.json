@@ -1,27 +1,61 @@
 {
-  "Server":"https://carnival.500foods.com:44944/acuranzo",
-  "LTI":"https://client.acuranzo.com/lti.html",
+  "Server": "https://carnival.500foods.com:44944/acuranzo",
+  "LTI": "https://client.acuranzo.com/lti.html",
   "Title": "Demos and Tools",
   "FavIcon": "images/lanboss-favicon.ico",
   "Education": {
-    "Icon":"<img class=\"Octopus\" width=50 height=50 src=images/oo_education.png>",
+    "Icon": "<img class=\"Octopus\" width=50 height=50 src=images/oo_education.png>",
     "Title": "Education",
-    "SubTitle":"Moodle",
-    "Link":"https://lms.lanbuzz.com",
-    "Enabled":true
+    "SubTitle": "Moodle",
+    "Link": "https://lms.lanbuzz.com",
+    "Enabled": true
   },
   "Management": {
-    "Icon":"<img class=\"Acuranzo\" width=50 height=50 src=images/acuranzo.png>",
+    "Icon": "<img class=\"Acuranzo\" width=50 height=50 src=images/acuranzo.png>",
     "Title": "Management",
-    "SubTitle":"Acuranzo",
-    "Link":"https://client.acuranzo.com",
-    "Enabled":true
+    "SubTitle": "Acuranzo",
+    "Link": "https://client.acuranzo.com",
+    "Enabled": true
   },
   "API": {
-    "Icon":"<img class=\"Swagger\" width=50 height=50 src=images/swagger.png>",
+    "Icon": "<img class=\"Swagger\" width=50 height=50 src=images/swagger.png>",
     "Title": "API Access",
-    "SubTitle":"Swagger",
-    "Link":"https://client.acuranzo.com/swagger",
-    "Enabled":true
-  }
+    "SubTitle": "Swagger",
+    "Link": "https://client.acuranzo.com/swagger",
+    "Enabled": true
+  },
+  "Offers": [
+    {
+      "Order": 0,
+      "Code": "SAF-101",
+      "Enabled": true,
+      "Title": "Online Course: 101 AI Safety Foundations Introduction",
+      "Cost": "Free",
+      "Description": "This course takes approximately one hour, covering basic AI topics and terminology with a focus on safety."
+    },
+    {
+      "Order": 1,
+      "Code": "SAF-102",
+      "Enabled": true,
+      "Title": "Online Course: 102 AI Safety Foundations Self-Guided",
+      "Cost": "$9 USD",
+      "Description": "This course takes approximately 8 hours, covering the safe use of AI in detail, with a focus on the use of AI within an organization."
+    },
+    {
+      "Order": 2,
+      "Code": "SAF-110",
+      "Enabled": true,
+      "Title": "Online Course: 110 AI Safety Foundations Instructor-Led",
+      "Cost": "$99 USD",
+      "Description": "The Safe AI Foundation workshop is a one-day, hands-on program that equips participants with practical AI skills, ethical and secure usage knowledge, including group activities with other online participants."
+    },
+    {
+      "Order": 3,
+      "Code": "SAF-201",
+      "Enabled": true,
+      "Title": "In-Person Course: 201 AI Safety Foundations Certificate Program",
+      "Cost": "$249 USD",
+      "Description": "The Safe AI Foundation workshop is a one-day, instructor-led in-person program that equips participants with practical AI skills, ethical and secure usage knowledge, and a certificate of completion to demonstrate their AI literacy."
+    }
+  ]
 }

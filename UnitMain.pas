@@ -80,6 +80,65 @@ type
     divControlPop: TWebHTMLDiv;
     divControlTab: TWebHTMLDiv;
     divMask: TWebHTMLDiv;
+    divRegister: TWebHTMLDiv;
+    btnCancelRegister: TWebButton;
+    WebHTMLDiv1: TWebHTMLDiv;
+    WebHTMLDiv2: TWebHTMLDiv;
+    WebEdit1: TWebEdit;
+    WebHTMLDiv3: TWebHTMLDiv;
+    WebHTMLDiv4: TWebHTMLDiv;
+    WebEdit2: TWebEdit;
+    WebHTMLDiv5: TWebHTMLDiv;
+    WebHTMLDiv6: TWebHTMLDiv;
+    WebEdit3: TWebEdit;
+    WebHTMLDiv7: TWebHTMLDiv;
+    WebHTMLDiv8: TWebHTMLDiv;
+    WebEdit4: TWebEdit;
+    WebHTMLDiv9: TWebHTMLDiv;
+    WebHTMLDiv10: TWebHTMLDiv;
+    WebEdit5: TWebEdit;
+    WebHTMLDiv11: TWebHTMLDiv;
+    WebHTMLDiv12: TWebHTMLDiv;
+    WebHTMLDiv13: TWebHTMLDiv;
+    WebHTMLDiv14: TWebHTMLDiv;
+    WebHTMLDiv15: TWebHTMLDiv;
+    WebHTMLDiv16: TWebHTMLDiv;
+    WebEdit6: TWebEdit;
+    WebHTMLDiv17: TWebHTMLDiv;
+    WebHTMLDiv18: TWebHTMLDiv;
+    WebEdit7: TWebEdit;
+    WebHTMLDiv19: TWebHTMLDiv;
+    WebHTMLDiv20: TWebHTMLDiv;
+    WebEdit8: TWebEdit;
+    WebHTMLDiv23: TWebHTMLDiv;
+    WebHTMLDiv24: TWebHTMLDiv;
+    WebEdit10: TWebEdit;
+    WebHTMLDiv25: TWebHTMLDiv;
+    WebHTMLDiv26: TWebHTMLDiv;
+    WebEdit11: TWebEdit;
+    WebHTMLDiv27: TWebHTMLDiv;
+    WebHTMLDiv28: TWebHTMLDiv;
+    WebEdit12: TWebEdit;
+    WebHTMLDiv29: TWebHTMLDiv;
+    WebHTMLDiv30: TWebHTMLDiv;
+    WebEdit13: TWebEdit;
+    WebHTMLDiv31: TWebHTMLDiv;
+    WebHTMLDiv32: TWebHTMLDiv;
+    WebHTMLDiv33: TWebHTMLDiv;
+    WebHTMLDiv34: TWebHTMLDiv;
+    WebEdit14: TWebEdit;
+    WebHTMLDiv35: TWebHTMLDiv;
+    WebHTMLDiv36: TWebHTMLDiv;
+    WebEdit15: TWebEdit;
+    WebHTMLDiv21: TWebHTMLDiv;
+    WebHTMLDiv22: TWebHTMLDiv;
+    edtTimezone: TWebEdit;
+    WebHTMLDiv37: TWebHTMLDiv;
+    WebHTMLDiv38: TWebHTMLDiv;
+    WebHTMLDiv39: TWebHTMLDiv;
+    memoDiscovery: TWebMemo;
+    WebHTMLDiv40: TWebHTMLDiv;
+    WebHTMLDiv41: TWebHTMLDiv;
     procedure divManagementClick(Sender: TObject);
     procedure divEducationClick(Sender: TObject);
     procedure divAPIClick(Sender: TObject);
@@ -100,6 +159,7 @@ type
     procedure divControlTopClick(Sender: TObject);
     procedure divControlPopClick(Sender: TObject);
     procedure divControlTabClick(Sender: TObject);
+    procedure btnCancelRegisterClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -164,6 +224,7 @@ begin
       setTimeout(function(){ divMargin.style.setProperty('transition','all var(--transition-time'); },2000);
     }
 
+    memoDiscovery.setAttribute('maxlength',1000);
 
   } end; {$ENDIF}
 
@@ -172,7 +233,7 @@ begin
   Await(LoadDemos);
 
   {$IFNDEF WIN32 } asm {
-      var btns = document.querySelectorAll('.btnDemo.order-1');
+    var btns = document.querySelectorAll('.btnDemo.order-1');
     if (btns.length == 1) {
       btns[0].click();
     }
@@ -255,6 +316,19 @@ begin
     }
 
   end;
+end;
+
+procedure TForm1.btnCancelRegisterClick(Sender: TObject);
+begin
+  btnLogin.Visible := True;
+  btnRegister.Visible := True;
+  btnLogout.Visible := False;
+  btnCancelRegister.Visible := False;
+  divDemo.Visible := True;
+  divDemos.Visible := True;
+  divControls.Visible := True;
+  divBottom.Visible := True;
+  divRegister.Visible := False;
 end;
 
 procedure TForm1.btnDemoClick(demoid: String);
@@ -403,7 +477,13 @@ procedure TForm1.btnRegisterClick(Sender: TObject);
 begin
   btnLogin.Visible := False;
   btnRegister.Visible := False;
-  btnLogout.Visible := True;
+  btnLogout.Visible := False;
+  btnCancelRegister.visible := True;
+  divDemo.Visible := False;
+  divDemos.Visible := False;
+  divControls.Visible := False;
+  divBottom.Visible := False;
+  divRegister.Visible := True;
 end;
 
 procedure TForm1.GetServerInfo;
@@ -542,6 +622,7 @@ begin
   {$IFNDEF WIN32 } asm {
     this.APP_Timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   } end; {$ENDIF}
+  edtTimezone.Text := APP_Timezone;
 
   try
     // This is about trying to find the appropriate URL in the different prod/dev/test environments

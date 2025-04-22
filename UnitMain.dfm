@@ -1,6 +1,6 @@
 object Form1: TForm1
   Width = 998
-  Height = 866
+  Height = 1218
   CSSLibrary = cssBootstrap
   ElementClassName = 'd-flex flex-row w-100 h-100'
   ElementFont = efCSS
@@ -10,7 +10,7 @@ object Form1: TForm1
     Left = 164
     Top = 8
     Width = 801
-    Height = 801
+    Height = 1202
     ElementClassName = 'px-3 gap-3 d-flex flex-column h-100 w-100 align-items-center'
     ElementID = 'divMain'
     ChildOrder = 4
@@ -18,11 +18,11 @@ object Form1: TForm1
     ElementFont = efCSS
     Role = ''
     object divBottom: TWebHTMLDiv
-      Left = 32
-      Top = 701
+      Left = 40
+      Top = 286
       Width = 713
       Height = 74
-      ElementClassName = 'order-4 d-flex flex-row flex-wrap gap-3 justify-content-center'
+      ElementClassName = 'order-4 flex-row flex-wrap gap-3 justify-content-center'
       ElementID = 'divBottom'
       HeightStyle = ssAuto
       WidthStyle = ssPercent
@@ -354,10 +354,10 @@ object Form1: TForm1
       end
     end
     object divDemo: TWebHTMLDiv
-      Left = 35
-      Top = 128
+      Left = 32
+      Top = 72
       Width = 729
-      Height = 186
+      Height = 105
       ElementClassName = 'order-1 OrangeOctopus resize-bottom'
       ElementID = 'divDemo'
       WidthStyle = ssPercent
@@ -369,7 +369,7 @@ object Form1: TForm1
         Left = 21
         Top = 3
         Width = 692
-        Height = 180
+        Height = 94
         ElementClassName = 'nointeract'
         ElementID = 'divDemoContainer'
         HeightStyle = ssPercent
@@ -379,9 +379,9 @@ object Form1: TForm1
         Role = ''
         object divDemoBorder: TWebHTMLDiv
           Left = 78
-          Top = 16
+          Top = 3
           Width = 563
-          Height = 41
+          Height = 24
           ElementClassName = 'nointeract'
           ElementID = 'divDemoBorder'
           HeightStyle = ssPercent
@@ -393,9 +393,9 @@ object Form1: TForm1
         end
         object divCurtains: TWebHTMLDiv
           Left = 78
-          Top = 72
+          Top = 33
           Width = 560
-          Height = 41
+          Height = 24
           ElementID = 'divCurtains'
           HeightStyle = ssPercent
           WidthStyle = ssPercent
@@ -406,9 +406,9 @@ object Form1: TForm1
         end
         object diviFrame: TWebHTMLDiv
           Left = 78
-          Top = 119
+          Top = 63
           Width = 560
-          Height = 40
+          Height = 24
           ElementID = 'diviFrame'
           HeightStyle = ssPercent
           WidthStyle = ssPercent
@@ -421,9 +421,9 @@ object Form1: TForm1
     end
     object divTop: TWebHTMLDiv
       Left = 32
-      Top = 3
+      Top = 12
       Width = 729
-      Height = 60
+      Height = 45
       ElementClassName = 'd-flex p-1 gap-1 order-0'
       ElementID = 'divTop'
       HeightStyle = ssAuto
@@ -432,10 +432,10 @@ object Form1: TForm1
       ElementFont = efCSS
       Role = ''
       object btnLogin: TWebButton
-        Left = 488
-        Top = 17
+        Left = 304
+        Top = 8
         Width = 96
-        Height = 40
+        Height = 25
         Caption = 'Login <i class="fa-duotone fa-right-to-bracket ms-2 fa-xl"></i>'
         ChildOrder = 1
         ElementClassName = 'ms-auto btn btn-primary RegButton'
@@ -448,13 +448,13 @@ object Form1: TForm1
         OnClick = btnLoginClick
       end
       object btnRegister: TWebButton
-        Left = 590
-        Top = 17
+        Left = 406
+        Top = 8
         Width = 96
-        Height = 40
+        Height = 25
         Caption = 'Register <i class="fa-duotone fa-address-card ms-2 fa-xl"></i>'
         ChildOrder = 2
-        ElementClassName = 'rounded btn btn-primary RegButton'
+        ElementClassName = 'btn btn-primary RegButton'
         ElementFont = efCSS
         ElementPosition = epRelative
         HeightStyle = ssAuto
@@ -464,10 +464,10 @@ object Form1: TForm1
         OnClick = btnRegisterClick
       end
       object btnLogout: TWebButton
-        Left = 386
-        Top = 17
+        Left = 202
+        Top = 8
         Width = 96
-        Height = 40
+        Height = 25
         Caption = 
           'Logout <i class="fa-duotone fa-right-from-bracket ms-2 fa-xl"></' +
           'i>'
@@ -483,10 +483,10 @@ object Form1: TForm1
         OnClick = btnLogoutClick
       end
       object divCaption: TWebHTMLDiv
-        Left = 24
-        Top = 3
+        Left = 8
+        Top = 8
         Width = 100
-        Height = 41
+        Height = 25
         ElementClassName = 
           'user-select-none d-flex p-3 align-items-center justify-content-s' +
           'tart '
@@ -499,15 +499,34 @@ object Form1: TForm1
           '<div>Loading... ...Please wait</div>')
         Role = ''
       end
+      object btnCancelRegister: TWebButton
+        Left = 508
+        Top = 8
+        Width = 96
+        Height = 25
+        Caption = 
+          'Cancel Registration<i class="fa-duotone fa-xmark ms-2 fa-xl"></i' +
+          '>'
+        ChildOrder = 2
+        ElementClassName = 'ms-auto btn btn-danger'
+        ElementFont = efCSS
+        ElementPosition = epRelative
+        HeightStyle = ssAuto
+        HeightPercent = 100.000000000000000000
+        Visible = False
+        WidthStyle = ssAuto
+        WidthPercent = 100.000000000000000000
+        OnClick = btnCancelRegisterClick
+      end
     end
     object divDemos: TWebHTMLDiv
-      Left = 72
-      Top = 352
-      Width = 667
-      Height = 266
+      Left = 32
+      Top = 192
+      Width = 729
+      Height = 41
       ElementClassName = 
-        'p-3 order-2 d-flex flex-wrap gap-3 justify-content-center align-' +
-        'items-center'
+        'p-3 order-2 flex-wrap gap-3 justify-content-center align-items-c' +
+        'enter'
       ElementID = 'divDemos'
       HeightStyle = ssAuto
       WidthStyle = ssAuto
@@ -517,11 +536,11 @@ object Form1: TForm1
       Role = ''
     end
     object divControls: TWebHTMLDiv
-      Left = 225
-      Top = 624
+      Left = 201
+      Top = 239
       Width = 385
-      Height = 49
-      ElementClassName = 'order-3 d-flex flex-row flex-shrink-0'
+      Height = 41
+      ElementClassName = 'order-3 flex-row flex-shrink-0'
       ElementID = 'divControls'
       HeightStyle = ssAuto
       WidthStyle = ssAuto
@@ -531,9 +550,9 @@ object Form1: TForm1
       Role = ''
       object divControlTop: TWebHTMLDiv
         Left = 43
-        Top = 3
+        Top = 8
         Width = 78
-        Height = 43
+        Height = 24
         ElementClassName = 'selected'
         ElementID = 'divControlTop'
         HeightStyle = ssAuto
@@ -548,9 +567,9 @@ object Form1: TForm1
       end
       object divControlPop: TWebHTMLDiv
         Left = 155
-        Top = 0
+        Top = 8
         Width = 78
-        Height = 43
+        Height = 24
         ElementID = 'divControlPop'
         HeightStyle = ssAuto
         WidthStyle = ssAuto
@@ -564,9 +583,9 @@ object Form1: TForm1
       end
       object divControlTab: TWebHTMLDiv
         Left = 255
-        Top = 3
+        Top = 8
         Width = 78
-        Height = 43
+        Height = 24
         ElementID = 'divControlTab'
         HeightStyle = ssAuto
         WidthStyle = ssAuto
@@ -579,6 +598,823 @@ object Form1: TForm1
             '2"></i>')
         Role = ''
         OnClick = divControlTabClick
+      end
+    end
+    object divRegister: TWebHTMLDiv
+      Left = 147
+      Top = 362
+      Width = 489
+      Height = 823
+      ElementClassName = 'order-5 p-1 gap-1 flex-column'
+      ElementID = 'divRegister'
+      HeightStyle = ssAuto
+      WidthStyle = ssAuto
+      ChildOrder = 5
+      ElementPosition = epRelative
+      ElementFont = efCSS
+      Role = ''
+      Visible = False
+      object WebHTMLDiv1: TWebHTMLDiv
+        Left = 16
+        Top = 48
+        Width = 449
+        Height = 32
+        ElementClassName = 'order-1 d-flex flex-row align-items-center '
+        HeightStyle = ssAuto
+        WidthStyle = ssAuto
+        ChildOrder = 1
+        ElementPosition = epRelative
+        ElementFont = efCSS
+        Role = ''
+        object WebHTMLDiv2: TWebHTMLDiv
+          Left = 16
+          Top = 4
+          Width = 110
+          Height = 24
+          ElementClassName = 'flex-shrink-0 text-end RegLabel'
+          HeightStyle = ssAuto
+          ElementPosition = epRelative
+          ElementFont = efCSS
+          HTML.Strings = (
+            '* First Name')
+          Role = ''
+        end
+        object WebEdit1: TWebEdit
+          Left = 248
+          Top = 4
+          Width = 121
+          Height = 24
+          AutoCompletion = acGivenName
+          ChildOrder = 1
+          ElementClassName = 'w-100 px-2 py-1 ms-2 RegEdit'
+          ElementFont = efCSS
+          ElementPosition = epRelative
+          HeightStyle = ssAuto
+          HeightPercent = 100.000000000000000000
+          MaxLength = 50
+          WidthStyle = ssPercent
+          WidthPercent = 100.000000000000000000
+        end
+      end
+      object WebHTMLDiv3: TWebHTMLDiv
+        Left = 16
+        Top = 82
+        Width = 449
+        Height = 32
+        ElementClassName = 'order-2 d-flex flex-row align-items-center '
+        HeightStyle = ssAuto
+        WidthStyle = ssAuto
+        ChildOrder = 2
+        ElementPosition = epRelative
+        ElementFont = efCSS
+        Role = ''
+        object WebHTMLDiv4: TWebHTMLDiv
+          Left = 16
+          Top = 4
+          Width = 110
+          Height = 24
+          ElementClassName = 'flex-shrink-0 text-end RegLabel'
+          HeightStyle = ssAuto
+          ElementPosition = epRelative
+          ElementFont = efCSS
+          HTML.Strings = (
+            '* Last Name')
+          Role = ''
+        end
+        object WebEdit2: TWebEdit
+          Left = 248
+          Top = 4
+          Width = 121
+          Height = 24
+          AutoCompletion = acFamilyName
+          ChildOrder = 1
+          ElementClassName = 'w-100 px-2 py-1 ms-2 RegEdit'
+          ElementFont = efCSS
+          ElementPosition = epRelative
+          HeightStyle = ssAuto
+          HeightPercent = 100.000000000000000000
+          MaxLength = 50
+          WidthStyle = ssPercent
+          WidthPercent = 100.000000000000000000
+        end
+      end
+      object WebHTMLDiv5: TWebHTMLDiv
+        Left = 16
+        Top = 116
+        Width = 449
+        Height = 32
+        ElementClassName = 'order-3 d-flex flex-row align-items-center '
+        HeightStyle = ssAuto
+        WidthStyle = ssAuto
+        ChildOrder = 3
+        ElementPosition = epRelative
+        ElementFont = efCSS
+        Role = ''
+        object WebHTMLDiv6: TWebHTMLDiv
+          Left = 16
+          Top = 4
+          Width = 110
+          Height = 24
+          ElementClassName = 'flex-shrink-0 text-end RegLabel'
+          HeightStyle = ssAuto
+          ElementPosition = epRelative
+          ElementFont = efCSS
+          HTML.Strings = (
+            'Title')
+          Role = ''
+        end
+        object WebEdit3: TWebEdit
+          Left = 248
+          Top = 4
+          Width = 121
+          Height = 24
+          AutoCompletion = acHonorificPrefix
+          ChildOrder = 1
+          ElementClassName = 'w-100 px-2 py-1 ms-2 RegEdit'
+          ElementFont = efCSS
+          ElementPosition = epRelative
+          HeightStyle = ssAuto
+          HeightPercent = 100.000000000000000000
+          MaxLength = 50
+          WidthStyle = ssPercent
+          WidthPercent = 100.000000000000000000
+        end
+      end
+      object WebHTMLDiv7: TWebHTMLDiv
+        Left = 16
+        Top = 150
+        Width = 449
+        Height = 32
+        ElementClassName = 'order-4 d-flex flex-row align-items-center'
+        HeightStyle = ssAuto
+        WidthStyle = ssAuto
+        ChildOrder = 4
+        ElementPosition = epRelative
+        ElementFont = efCSS
+        Role = ''
+        object WebHTMLDiv8: TWebHTMLDiv
+          Left = 16
+          Top = 4
+          Width = 110
+          Height = 24
+          ElementClassName = 'flex-shrink-0 text-end RegLabel'
+          HeightStyle = ssAuto
+          ElementPosition = epRelative
+          ElementFont = efCSS
+          HTML.Strings = (
+            '* E-Mail')
+          Role = ''
+        end
+        object WebEdit4: TWebEdit
+          Left = 248
+          Top = 4
+          Width = 121
+          Height = 24
+          AutoCompletion = acEmail
+          ChildOrder = 1
+          ElementClassName = 'w-100 px-2 py-1 ms-2 RegEdit'
+          ElementFont = efCSS
+          ElementPosition = epRelative
+          HeightStyle = ssAuto
+          HeightPercent = 100.000000000000000000
+          MaxLength = 50
+          WidthStyle = ssPercent
+          WidthPercent = 100.000000000000000000
+        end
+      end
+      object WebHTMLDiv9: TWebHTMLDiv
+        Left = 16
+        Top = 184
+        Width = 449
+        Height = 32
+        ElementClassName = 'order-5 d-flex flex-row align-items-center'
+        HeightStyle = ssAuto
+        WidthStyle = ssAuto
+        ChildOrder = 5
+        ElementPosition = epRelative
+        ElementFont = efCSS
+        Role = ''
+        object WebHTMLDiv10: TWebHTMLDiv
+          Left = 16
+          Top = 4
+          Width = 110
+          Height = 24
+          ElementClassName = 'flex-shrink-0 text-end RegLabel'
+          HeightStyle = ssAuto
+          ElementPosition = epRelative
+          ElementFont = efCSS
+          HTML.Strings = (
+            'Phone')
+          Role = ''
+        end
+        object WebEdit5: TWebEdit
+          Left = 248
+          Top = 4
+          Width = 121
+          Height = 24
+          AutoCompletion = acTelephone
+          ChildOrder = 1
+          ElementClassName = 'w-100 px-2 py-1 ms-2 RegEdit'
+          ElementFont = efCSS
+          ElementPosition = epRelative
+          HeightStyle = ssAuto
+          HeightPercent = 100.000000000000000000
+          MaxLength = 50
+          WidthStyle = ssPercent
+          WidthPercent = 100.000000000000000000
+        end
+      end
+      object WebHTMLDiv11: TWebHTMLDiv
+        Left = 16
+        Top = 14
+        Width = 449
+        Height = 32
+        ElementClassName = 
+          'RegTitle order-0 d-flex flex-row align-items-center justify-cont' +
+          'ent-center'
+        HeightStyle = ssAuto
+        WidthStyle = ssAuto
+        ElementPosition = epRelative
+        ElementFont = efCSS
+        Role = ''
+        object WebHTMLDiv12: TWebHTMLDiv
+          Left = 16
+          Top = 4
+          Width = 350
+          Height = 24
+          ElementClassName = 'flex-shrink-0 text-center py-1'
+          HeightStyle = ssAuto
+          ElementPosition = epRelative
+          ElementFont = efCSS
+          HTML.Strings = (
+            'Basic Information')
+          Role = ''
+        end
+      end
+      object WebHTMLDiv13: TWebHTMLDiv
+        Left = 16
+        Top = 368
+        Width = 449
+        Height = 32
+        ElementClassName = 
+          'order-10 RegTitle d-flex flex-row align-items-center justify-con' +
+          'tent-center'
+        HeightStyle = ssAuto
+        WidthStyle = ssAuto
+        ChildOrder = 10
+        ElementPosition = epRelative
+        ElementFont = efCSS
+        Role = ''
+        object WebHTMLDiv14: TWebHTMLDiv
+          Left = 16
+          Top = 4
+          Width = 325
+          Height = 24
+          ElementClassName = 'flex-shrink-0 py-1 text-center'
+          HeightStyle = ssAuto
+          WidthStyle = ssAuto
+          ElementPosition = epRelative
+          ElementFont = efCSS
+          HTML.Strings = (
+            'Mailing Address')
+          Role = ''
+        end
+      end
+      object WebHTMLDiv15: TWebHTMLDiv
+        Left = 16
+        Top = 402
+        Width = 449
+        Height = 32
+        ElementClassName = 'order-11 d-flex flex-row align-items-center'
+        HeightStyle = ssAuto
+        WidthStyle = ssAuto
+        ChildOrder = 11
+        ElementPosition = epRelative
+        ElementFont = efCSS
+        Role = ''
+        object WebHTMLDiv16: TWebHTMLDiv
+          Left = 16
+          Top = 3
+          Width = 110
+          Height = 24
+          ElementClassName = 'flex-shrink-0 text-end RegLabel'
+          HeightStyle = ssAuto
+          ElementPosition = epRelative
+          ElementFont = efCSS
+          HTML.Strings = (
+            'Company ')
+          Role = ''
+        end
+        object WebEdit6: TWebEdit
+          Left = 248
+          Top = 4
+          Width = 121
+          Height = 24
+          AutoCompletion = acOrganization
+          ChildOrder = 1
+          ElementClassName = 'w-100 px-2 py-1 ms-2 RegEdit'
+          ElementFont = efCSS
+          ElementPosition = epRelative
+          HeightStyle = ssAuto
+          HeightPercent = 100.000000000000000000
+          MaxLength = 50
+          WidthStyle = ssPercent
+          WidthPercent = 100.000000000000000000
+        end
+      end
+      object WebHTMLDiv17: TWebHTMLDiv
+        Left = 16
+        Top = 436
+        Width = 449
+        Height = 32
+        ElementClassName = 'order-12 d-flex flex-row align-items-center'
+        HeightStyle = ssAuto
+        WidthStyle = ssAuto
+        ChildOrder = 12
+        ElementPosition = epRelative
+        ElementFont = efCSS
+        Role = ''
+        object WebHTMLDiv18: TWebHTMLDiv
+          Left = 16
+          Top = 4
+          Width = 110
+          Height = 24
+          ElementClassName = 'flex-shrink-0 text-end RegLabel'
+          HeightStyle = ssAuto
+          ElementPosition = epRelative
+          ElementFont = efCSS
+          HTML.Strings = (
+            'Address 1')
+          Role = ''
+        end
+        object WebEdit7: TWebEdit
+          Left = 248
+          Top = 4
+          Width = 121
+          Height = 24
+          AutoCompletion = acAddressLine1
+          ChildOrder = 1
+          ElementClassName = 'w-100 px-2 py-1 ms-2 RegEdit'
+          ElementFont = efCSS
+          ElementPosition = epRelative
+          HeightStyle = ssAuto
+          HeightPercent = 100.000000000000000000
+          MaxLength = 50
+          WidthStyle = ssPercent
+          WidthPercent = 100.000000000000000000
+        end
+      end
+      object WebHTMLDiv19: TWebHTMLDiv
+        Left = 16
+        Top = 470
+        Width = 449
+        Height = 32
+        ElementClassName = 'order-13 d-flex flex-row align-items-center'
+        HeightStyle = ssAuto
+        WidthStyle = ssAuto
+        ChildOrder = 13
+        ElementPosition = epRelative
+        ElementFont = efCSS
+        Role = ''
+        object WebHTMLDiv20: TWebHTMLDiv
+          Left = 15
+          Top = 5
+          Width = 110
+          Height = 24
+          ElementClassName = 'flex-shrink-0 text-end RegLabel'
+          HeightStyle = ssAuto
+          ElementPosition = epRelative
+          ElementFont = efCSS
+          HTML.Strings = (
+            'Address 2')
+          Role = ''
+        end
+        object WebEdit8: TWebEdit
+          Left = 248
+          Top = 4
+          Width = 121
+          Height = 24
+          AutoCompletion = acAddressLine2
+          ChildOrder = 1
+          ElementClassName = 'w-100 px-2 py-1 ms-2 RegEdit'
+          ElementFont = efCSS
+          ElementPosition = epRelative
+          HeightStyle = ssAuto
+          HeightPercent = 100.000000000000000000
+          MaxLength = 50
+          WidthStyle = ssPercent
+          WidthPercent = 100.000000000000000000
+        end
+      end
+      object WebHTMLDiv23: TWebHTMLDiv
+        Left = 16
+        Top = 500
+        Width = 449
+        Height = 32
+        ElementClassName = 'order-14 d-flex flex-row align-items-center'
+        HeightStyle = ssAuto
+        WidthStyle = ssAuto
+        ChildOrder = 14
+        ElementPosition = epRelative
+        ElementFont = efCSS
+        Role = ''
+        object WebHTMLDiv24: TWebHTMLDiv
+          Left = 16
+          Top = 4
+          Width = 110
+          Height = 24
+          ElementClassName = 'flex-shrink-0 text-end RegLabel'
+          HeightStyle = ssAuto
+          ElementPosition = epRelative
+          ElementFont = efCSS
+          HTML.Strings = (
+            'City')
+          Role = ''
+        end
+        object WebEdit10: TWebEdit
+          Left = 248
+          Top = 4
+          Width = 121
+          Height = 24
+          AutoCompletion = acAddressLine3
+          ChildOrder = 1
+          ElementClassName = 'w-100 px-2 py-1 ms-2 RegEdit'
+          ElementFont = efCSS
+          ElementPosition = epRelative
+          HeightStyle = ssAuto
+          HeightPercent = 100.000000000000000000
+          MaxLength = 50
+          WidthStyle = ssPercent
+          WidthPercent = 100.000000000000000000
+        end
+      end
+      object WebHTMLDiv25: TWebHTMLDiv
+        Left = 16
+        Top = 534
+        Width = 449
+        Height = 32
+        ElementClassName = 'order-15 d-flex flex-row align-items-center'
+        HeightStyle = ssAuto
+        WidthStyle = ssAuto
+        ChildOrder = 15
+        ElementPosition = epRelative
+        ElementFont = efCSS
+        Role = ''
+        object WebHTMLDiv26: TWebHTMLDiv
+          Left = 16
+          Top = 4
+          Width = 110
+          Height = 24
+          ElementClassName = 'flex-shrink-0 text-end RegLabel'
+          HeightStyle = ssAuto
+          ElementPosition = epRelative
+          ElementFont = efCSS
+          HTML.Strings = (
+            'Province / State')
+          Role = ''
+        end
+        object WebEdit11: TWebEdit
+          Left = 248
+          Top = 4
+          Width = 121
+          Height = 24
+          ChildOrder = 1
+          ElementClassName = 'w-100 px-2 py-1 ms-2 RegEdit'
+          ElementFont = efCSS
+          ElementPosition = epRelative
+          HeightStyle = ssAuto
+          HeightPercent = 100.000000000000000000
+          MaxLength = 50
+          WidthStyle = ssPercent
+          WidthPercent = 100.000000000000000000
+        end
+      end
+      object WebHTMLDiv27: TWebHTMLDiv
+        Left = 16
+        Top = 568
+        Width = 449
+        Height = 32
+        ElementClassName = 'order-16 d-flex flex-row align-items-center'
+        HeightStyle = ssAuto
+        WidthStyle = ssAuto
+        ChildOrder = 16
+        ElementPosition = epRelative
+        ElementFont = efCSS
+        Role = ''
+        object WebHTMLDiv28: TWebHTMLDiv
+          Left = 16
+          Top = 4
+          Width = 110
+          Height = 24
+          ElementClassName = 'flex-shrink-0 text-end RegLabel'
+          HeightStyle = ssAuto
+          ElementPosition = epRelative
+          ElementFont = efCSS
+          HTML.Strings = (
+            'Postal / Zip Code')
+          Role = ''
+        end
+        object WebEdit12: TWebEdit
+          Left = 248
+          Top = 4
+          Width = 121
+          Height = 24
+          ChildOrder = 1
+          ElementClassName = 'w-100 px-2 py-1 ms-2 RegEdit'
+          ElementFont = efCSS
+          ElementPosition = epRelative
+          HeightStyle = ssAuto
+          HeightPercent = 100.000000000000000000
+          MaxLength = 50
+          WidthStyle = ssPercent
+          WidthPercent = 100.000000000000000000
+        end
+      end
+      object WebHTMLDiv29: TWebHTMLDiv
+        Left = 16
+        Top = 606
+        Width = 449
+        Height = 32
+        ElementClassName = 'order-17 d-flex flex-row align-items-center'
+        HeightStyle = ssAuto
+        WidthStyle = ssAuto
+        ChildOrder = 17
+        ElementPosition = epRelative
+        ElementFont = efCSS
+        Role = ''
+        object WebHTMLDiv30: TWebHTMLDiv
+          Left = 16
+          Top = 4
+          Width = 110
+          Height = 24
+          ElementClassName = 'flex-shrink-0 text-end RegLabel'
+          HeightStyle = ssAuto
+          ElementPosition = epRelative
+          ElementFont = efCSS
+          HTML.Strings = (
+            'Country')
+          Role = ''
+        end
+        object WebEdit13: TWebEdit
+          Left = 248
+          Top = 4
+          Width = 121
+          Height = 24
+          ChildOrder = 1
+          ElementClassName = 'w-100 px-2 py-1 ms-2 RegEdit'
+          ElementFont = efCSS
+          ElementPosition = epRelative
+          HeightStyle = ssAuto
+          HeightPercent = 100.000000000000000000
+          MaxLength = 50
+          WidthStyle = ssPercent
+          WidthPercent = 100.000000000000000000
+        end
+      end
+      object WebHTMLDiv31: TWebHTMLDiv
+        Left = 16
+        Top = 266
+        Width = 449
+        Height = 32
+        ElementClassName = 
+          'order-7 RegTitle d-flex flex-row align-items-center justify-cont' +
+          'ent-center'
+        HeightStyle = ssAuto
+        WidthStyle = ssAuto
+        ChildOrder = 7
+        ElementPosition = epRelative
+        ElementFont = efCSS
+        Role = ''
+        object WebHTMLDiv32: TWebHTMLDiv
+          Left = 16
+          Top = 4
+          Width = 325
+          Height = 24
+          ElementClassName = 'flex-shrink-0 py-1 text-center'
+          HeightStyle = ssAuto
+          WidthStyle = ssAuto
+          ElementPosition = epRelative
+          ElementFont = efCSS
+          HTML.Strings = (
+            'Create a New Password')
+          Role = ''
+        end
+      end
+      object WebHTMLDiv33: TWebHTMLDiv
+        Left = 16
+        Top = 300
+        Width = 449
+        Height = 32
+        ElementClassName = 'order-8 d-flex flex-row align-items-center'
+        HeightStyle = ssAuto
+        WidthStyle = ssAuto
+        ChildOrder = 8
+        ElementPosition = epRelative
+        ElementFont = efCSS
+        Role = ''
+        object WebHTMLDiv34: TWebHTMLDiv
+          Left = 16
+          Top = 3
+          Width = 110
+          Height = 24
+          ElementClassName = 'flex-shrink-0 text-end RegLabel'
+          HeightStyle = ssAuto
+          ElementPosition = epRelative
+          ElementFont = efCSS
+          HTML.Strings = (
+            'Enter Password')
+          Role = ''
+        end
+        object WebEdit14: TWebEdit
+          Left = 248
+          Top = 4
+          Width = 121
+          Height = 24
+          AutoCompletion = acCurrentPassword
+          ChildOrder = 1
+          ElementClassName = 'w-100 px-2 py-1 ms-2 RegEdit'
+          ElementFont = efCSS
+          ElementPosition = epRelative
+          HeightStyle = ssAuto
+          HeightPercent = 100.000000000000000000
+          MaxLength = 50
+          PasswordChar = '*'
+          WidthStyle = ssPercent
+          WidthPercent = 100.000000000000000000
+        end
+      end
+      object WebHTMLDiv35: TWebHTMLDiv
+        Left = 16
+        Top = 334
+        Width = 449
+        Height = 32
+        ElementClassName = 'order-9 d-flex flex-row align-items-center'
+        HeightStyle = ssAuto
+        WidthStyle = ssAuto
+        ChildOrder = 9
+        ElementPosition = epRelative
+        ElementFont = efCSS
+        Role = ''
+        object WebHTMLDiv36: TWebHTMLDiv
+          Left = 16
+          Top = 4
+          Width = 110
+          Height = 24
+          ElementClassName = 'flex-shrink-0 text-end RegLabel'
+          HeightStyle = ssAuto
+          ElementPosition = epRelative
+          ElementFont = efCSS
+          HTML.Strings = (
+            'Confirm Password')
+          Role = ''
+        end
+        object WebEdit15: TWebEdit
+          Left = 248
+          Top = 4
+          Width = 121
+          Height = 24
+          AutoCompletion = acCurrentPassword
+          ChildOrder = 1
+          ElementClassName = 'w-100 px-2 py-1 ms-2 RegEdit'
+          ElementFont = efCSS
+          ElementPosition = epRelative
+          HeightStyle = ssAuto
+          HeightPercent = 100.000000000000000000
+          MaxLength = 50
+          PasswordChar = '*'
+          WidthStyle = ssPercent
+          WidthPercent = 100.000000000000000000
+        end
+      end
+      object WebHTMLDiv21: TWebHTMLDiv
+        Left = 16
+        Top = 218
+        Width = 449
+        Height = 32
+        ElementClassName = 'order-6 d-flex flex-row align-items-center'
+        HeightStyle = ssAuto
+        WidthStyle = ssAuto
+        ChildOrder = 6
+        ElementPosition = epRelative
+        ElementFont = efCSS
+        Role = ''
+        object WebHTMLDiv22: TWebHTMLDiv
+          Left = 16
+          Top = 4
+          Width = 110
+          Height = 24
+          ElementClassName = 'flex-shrink-0 text-end RegLabel'
+          HeightStyle = ssAuto
+          ElementPosition = epRelative
+          ElementFont = efCSS
+          HTML.Strings = (
+            'Timezone')
+          Role = ''
+        end
+        object edtTimezone: TWebEdit
+          Left = 248
+          Top = 4
+          Width = 121
+          Height = 24
+          AutoCompletion = acNone
+          ChildOrder = 1
+          ElementClassName = 'w-100 px-2 py-1 ms-2 RegEdit'
+          ElementID = 'edtTimezone'
+          ElementFont = efCSS
+          ElementPosition = epRelative
+          HeightStyle = ssAuto
+          HeightPercent = 100.000000000000000000
+          MaxLength = 50
+          WidthStyle = ssPercent
+          WidthPercent = 100.000000000000000000
+        end
+      end
+      object WebHTMLDiv37: TWebHTMLDiv
+        Left = 16
+        Top = 640
+        Width = 449
+        Height = 32
+        ElementClassName = 
+          'order-18 RegTitle d-flex flex-row align-items-center justify-con' +
+          'tent-center'
+        HeightStyle = ssAuto
+        WidthStyle = ssAuto
+        ChildOrder = 18
+        ElementPosition = epRelative
+        ElementFont = efCSS
+        Role = ''
+        object WebHTMLDiv38: TWebHTMLDiv
+          Left = 16
+          Top = 4
+          Width = 325
+          Height = 24
+          ElementClassName = 'flex-shrink-0 py-1 text-center'
+          HeightStyle = ssAuto
+          WidthStyle = ssAuto
+          ElementPosition = epRelative
+          ElementFont = efCSS
+          HTML.Strings = (
+            '* How Did You Hear About Us?')
+          Role = ''
+        end
+      end
+      object WebHTMLDiv39: TWebHTMLDiv
+        Left = 16
+        Top = 674
+        Width = 449
+        Height = 32
+        ElementClassName = 'order-19 d-flex flex-row align-items-center'
+        HeightStyle = ssAuto
+        WidthStyle = ssAuto
+        ChildOrder = 19
+        ElementPosition = epRelative
+        ElementFont = efCSS
+        Role = ''
+        object memoDiscovery: TWebMemo
+          Left = 81
+          Top = 4
+          Width = 185
+          Height = 24
+          ElementClassName = 'RegEditMemo px-2'
+          ElementID = 'memoDiscovery'
+          ElementFont = efCSS
+          ElementPosition = epRelative
+          HeightStyle = ssAuto
+          HeightPercent = 100.000000000000000000
+          SelLength = 0
+          SelStart = 0
+          WidthStyle = ssPercent
+          WidthPercent = 100.000000000000000000
+        end
+      end
+      object WebHTMLDiv40: TWebHTMLDiv
+        Left = 16
+        Top = 708
+        Width = 449
+        Height = 32
+        ElementClassName = 
+          'order-20 RegTitle d-flex flex-row align-items-center justify-con' +
+          'tent-center'
+        HeightStyle = ssAuto
+        WidthStyle = ssAuto
+        ChildOrder = 20
+        ElementPosition = epRelative
+        ElementFont = efCSS
+        Role = ''
+        object WebHTMLDiv41: TWebHTMLDiv
+          Left = 16
+          Top = 4
+          Width = 325
+          Height = 24
+          ElementClassName = 'flex-shrink-0 py-1 text-center'
+          HeightStyle = ssAuto
+          WidthStyle = ssAuto
+          ElementPosition = epRelative
+          ElementFont = efCSS
+          HTML.Strings = (
+            'What Products or Services Are You Interested In?')
+          Role = ''
+        end
       end
     end
   end
