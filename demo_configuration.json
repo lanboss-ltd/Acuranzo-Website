@@ -2,6 +2,7 @@
   "Server":"https://carnival.500foods.com:44944/acuranzo",
   "LTI":"https://client.acuranzo.com/lti.html",
   "Title": "Demos & Tools",
+  "FavIcon": "images/lanboss-favicon.ico",
   "Education": {
     "Icon":"<img class=\"Octopus\" width=50 height=50 src=images/oo_education.png>",
     "Title": "Education",
