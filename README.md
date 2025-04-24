@@ -5,29 +5,29 @@ This repository contains the public-facing https://www.acuranzo.com website code
 [![Count Lines of Code](https://github.com/lanboss-ltd/Acuranzo-Website/actions/workflows/main.yml/badge.svg)](https://github.com/lanboss-ltd/Acuranzo-Website/actions/workflows/main.yml)
 <!--CLOC-START -->
 ```
-Last updated at 2025-04-22 21:52:31 UTC
+Last updated at 2025-04-24 22:28:43 UTC
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
-Delphi Form                      2              2              0           1478
-Pascal                           3            188            377            612
-CSS                              1             30             35            399
+Delphi Form                      2              2              0           1491
+CSS                              2             60             70            803
+Pascal                           3            191            386            621
 JSON                             6              0              0            250
-HTML                             3             27             20            158
+HTML                             4             41             30            237
 XML                              1              0              0            120
 JavaScript                       4              6              0             95
 YAML                             2             15             23             72
 Markdown                         1              2              2             36
 -------------------------------------------------------------------------------
-SUM:                            23            270            457           3220
+SUM:                            25            317            511           3725
 -------------------------------------------------------------------------------
-195 Files were skipped (duplicate, binary, or without source code):
+193 Files were skipped (duplicate, binary, or without source code):
   png: 174
   ico: 7
-  html: 4
-  css: 2
+  html: 3
   json: 2
   cname: 1
+  css: 1
   dproj: 1
   dsk: 1
   gitignore: 1
