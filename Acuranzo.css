@@ -95,13 +95,16 @@ button {
   overflow: hidden;
 }
 #divDemoContainer {
-   position: absolute !important;
-   top: 0px !important;
-   bottom: 12px !important;
-   left: 0px !important;
-   right: 0px !important;
-   width: unset !important;
-   height: unset !important;
+  position: absolute !important;
+  top: 0px !important;
+  bottom: 12px !important;
+  left: 0px !important;
+  right: 0px !important;
+  width: unset !important;
+  height: unset !important;
+  border-radius: var(--border-radius-frame);
+  transition: all var(--transition-time);
+  overflow: hidden;
 }
 #divDemoBorder {
   position: absolute;
@@ -131,6 +134,7 @@ button {
   z-index: 2;
 }
 
+#diviFrame2,
 #diviFrame {
   position: absolute;
   display: block;
@@ -143,6 +147,7 @@ button {
   z-index: 1;
   transition: all var(--transition-time);
 }
+#diviFrame2 > iframe,
 #diviFrame > iframe {
   position: absolute;
   display: block;

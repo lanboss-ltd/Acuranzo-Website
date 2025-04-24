@@ -139,6 +139,7 @@ type
     memoDiscovery: TWebMemo;
     WebHTMLDiv40: TWebHTMLDiv;
     WebHTMLDiv41: TWebHTMLDiv;
+    diviFrame2: TWebHTMLDiv;
     procedure divManagementClick(Sender: TObject);
     procedure divEducationClick(Sender: TObject);
     procedure divAPIClick(Sender: TObject);
@@ -172,8 +173,9 @@ type
     APP_URL_Mgt: String;     // Link to use for Mgt Button
     APP_URL_API: String;     // Link to use for API Button
 
-    APP_Mode: String;  // Inline, New Page, Float
-    APP_Popups: Integer;  // Keep track of popups
+    APP_Mode: String;           // Inline, New Page, Float
+    APP_Popups: Integer;        // Keep track of popups
+    APP_Frame_Switch: Integer;  // Used for managing swapping iFrames for speed
 
     XDataConnected: Boolean;
   end;
@@ -194,7 +196,8 @@ begin
   InteractJS.InitializeInteractJS;
   XDataConnected := False;
   APP_Mode := 'Top';
-  App_Popups := 0;
+  APP_Popups := 0;
+  APP_Frame_Switch := 0;
 
   {$IFNDEF WIN32 } asm {
     window.sleep = async function(msecs) { return new Promise((resolve) => setTimeout(resolve, parseInt(msecs) || 1000)); }
@@ -385,6 +388,12 @@ begin
     URL += '&Config='+Config;
 
     if (this.APP_Mode == "Top") {
+      if (this.APP_Frame_Switch == 0) {
+        diviFrame2.innerHTML = "<iframe src='"+URL+"'></iframe>";
+      } else {
+        diviFrame.innerHTML = "<iframe src='"+URL+"'></iframe>";
+      }
+
       var demos = document.querySelectorAll('.btnDemo');
       for (var i = 0; i < demos.length; i++) {
         demos[i].classList.remove('selected');
@@ -394,12 +403,24 @@ begin
       divCurtains.style.setProperty('height','100%','important');
       await window.sleep(500);
 
+      divDemoContainer.style.setProperty('border-radius', rounding);
       divDemoBorder.style.setProperty('border-radius', rounding);
       divCurtains.style.setProperty('border-radius', rounding);
+
+      diviFrame2.style.setProperty('border-radius', rounding);
       diviFrame.style.setProperty('border-radius', rounding);
 
-      diviFrame.innerHTML = "<iframe src='"+URL+"'>";
-      await window.sleep(500);
+      if (this.APP_Frame_Switch == 0) {
+        diviFrame.style.setProperty('display','none');
+        diviFrame2.style.setProperty('display','flex');
+        this.APP_Frame_Switch = 1;
+      } else {
+        diviFrame2.style.setProperty('display','none');
+        diviFrame.style.setProperty('display','flex');
+        this.APP_Frame_Switch = 0;
+      }
+
+      await window.sleep(1000);
       divCurtains.style.setProperty('height','0%','important');
 
 
@@ -419,7 +440,7 @@ begin
       popup.style.setProperty('width','45%');
       popup.style.setProperty('height','45%');
       popup.style.setProperty('z-index',10 + this.APP_Popups);
-      popup.innerHTML = "<div><iframe src='"+URL+"'></div>";
+      popup.innerHTML = "<div><iframe src='"+URL+"'></iframe></div>";
 
       var popmenu = document.createElement('div');
       popmenu.id = "popupP-"+this.APP_Popups;

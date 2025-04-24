@@ -407,9 +407,22 @@ object Form1: TForm1
         object diviFrame: TWebHTMLDiv
           Left = 78
           Top = 63
-          Width = 560
+          Width = 267
           Height = 24
           ElementID = 'diviFrame'
+          HeightStyle = ssPercent
+          WidthStyle = ssPercent
+          ChildOrder = 1
+          ElementPosition = epIgnore
+          ElementFont = efCSS
+          Role = ''
+        end
+        object diviFrame2: TWebHTMLDiv
+          Left = 358
+          Top = 63
+          Width = 267
+          Height = 24
+          ElementID = 'diviFrame2'
           HeightStyle = ssPercent
           WidthStyle = ssPercent
           ChildOrder = 1
