@@ -5,13 +5,13 @@ This repository contains the public-facing https://www.acuranzo.com website code
 [![Count Lines of Code](https://github.com/lanboss-ltd/Acuranzo-Website/actions/workflows/main.yml/badge.svg)](https://github.com/lanboss-ltd/Acuranzo-Website/actions/workflows/main.yml)
 <!--CLOC-START -->
 ```
-Last updated at 2025-04-25 00:24:49 UTC
+Last updated at 2025-04-25 00:27:07 UTC
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
 Delphi Form                      2              2              0           1478
-CSS                              2             60             70            806
-Pascal                           3            193            384            614
+Pascal                           3            193            383            614
+CSS                              1             30             35            402
 JSON                             6              0              0            250
 HTML                             3             27             20            158
 XML                              1              0              0            120
@@ -19,15 +19,15 @@ JavaScript                       4              6              0             95
 YAML                             2             15             23             72
 Markdown                         1              2              2             36
 -------------------------------------------------------------------------------
-SUM:                            24            305            499           3629
+SUM:                            23            275            463           3225
 -------------------------------------------------------------------------------
-194 Files were skipped (duplicate, binary, or without source code):
+195 Files were skipped (duplicate, binary, or without source code):
   png: 174
   ico: 7
   html: 4
+  css: 2
   json: 2
   cname: 1
-  css: 1
   dproj: 1
   dsk: 1
   gitignore: 1
