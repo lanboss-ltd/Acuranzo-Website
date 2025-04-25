@@ -134,10 +134,9 @@ button {
   z-index: 2;
 }
 
-#diviFrame2,
 #diviFrame {
   position: absolute;
-  display: block;
+  display: flex;
   top: 0px !important;
   left: 0px  !important;
   width: 100%  !important;
@@ -147,7 +146,6 @@ button {
   z-index: 1;
   transition: all var(--transition-time);
 }
-#diviFrame2 > iframe,
 #diviFrame > iframe {
   position: absolute;
   display: block;

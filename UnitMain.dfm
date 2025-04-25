@@ -417,19 +417,6 @@ object Form1: TForm1
           ElementFont = efCSS
           Role = ''
         end
-        object diviFrame2: TWebHTMLDiv
-          Left = 358
-          Top = 63
-          Width = 267
-          Height = 24
-          ElementID = 'diviFrame2'
-          HeightStyle = ssPercent
-          WidthStyle = ssPercent
-          ChildOrder = 1
-          ElementPosition = epIgnore
-          ElementFont = efCSS
-          Role = ''
-        end
       end
     end
     object divTop: TWebHTMLDiv

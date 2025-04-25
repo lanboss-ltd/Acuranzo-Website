@@ -14,32 +14,32 @@ File_11=TSourceModule,'C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Proje
 File_12=TSourceModule,'C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\TMS-XData-SurveyServerExample\SurveyClientServiceImplementation.pas',0,1,253,3,293,0,0,,
 
 [Modules]
-Module0=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuranzo-Website\Acuranzo.html
-Module1=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuranzo-Website\UnitMain.pas
+Module0=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuranzo-Website\UnitMain.pas
+Module1=default.htm
 Module2=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuranzo-Website\Acuranzo.css
-Module3=default.htm
+Module3=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuranzo-Website\Acuranzo.html
 Module4=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuranzo-Website\UnitInteractJS.pas
 Count=5
 EditWindowCount=1
 
-[C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuranzo-Website\Acuranzo.html]
-ModuleType=TSourceModule
-
 [C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuranzo-Website\UnitMain.pas]
-ModuleType=TSourceModule
-
-[C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuranzo-Website\Acuranzo.css]
 ModuleType=TSourceModule
 
 [default.htm]
 ModuleType=TURLModule
+
+[C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuranzo-Website\Acuranzo.css]
+ModuleType=TSourceModule
+
+[C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuranzo-Website\Acuranzo.html]
+ModuleType=TSourceModule
 
 [C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuranzo-Website\UnitInteractJS.pas]
 ModuleType=TSourceModule
 
 [EditWindow0]
 ViewCount=5
-CurrentEditView=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuranzo-Website\Acuranzo.html
+CurrentEditView=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuranzo-Website\UnitMain.pas
 View0=0
 View1=1
 View2=2
@@ -81,9 +81,9 @@ WelcomePageURL=bds:/default.htm
 [View1]
 CustomEditViewType=TEditView
 Module=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuranzo-Website\UnitMain.pas
-CursorX=62
-CursorY=411
-TopLine=379
+CursorX=5
+CursorY=211
+TopLine=191
 LeftCol=1
 Elisions=
 Bookmarks=
@@ -92,8 +92,8 @@ EditViewName=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuran
 [View2]
 CustomEditViewType=TEditView
 Module=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuranzo-Website\Acuranzo.css
-CursorX=20
-CursorY=107
+CursorX=16
+CursorY=139
 TopLine=85
 LeftCol=1
 Elisions=
