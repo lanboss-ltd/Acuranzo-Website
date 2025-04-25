@@ -405,6 +405,7 @@ begin
       for (var i = 0; i < demos.length; i++) {
         demos[i].classList.remove('selected');
       }
+      btn.classList.add('selected');
 
       divCurtains.style.setProperty('height','100%','important');
       await window.sleep(500);
