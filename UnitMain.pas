@@ -206,7 +206,6 @@ begin
   {$IFNDEF WIN32 } asm {
     window.addEventListener("message", (event) => {
       if (event.data.type === "LTIappLoaded") {
-        console.log(`Iframe app loaded for Model=${event.data.model}`);
         if (this.APP_Mode == "Top") {
           divCurtains.style.setProperty('height','0%','important');
         }
