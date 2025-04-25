@@ -15,8 +15,8 @@ File_12=TSourceModule,'C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Proje
 
 [Modules]
 Module0=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuranzo-Website\UnitMain.pas
-Module1=default.htm
-Module2=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuranzo-Website\Acuranzo.css
+Module1=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuranzo-Website\Acuranzo.css
+Module2=default.htm
 Module3=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuranzo-Website\Acuranzo.html
 Module4=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuranzo-Website\UnitInteractJS.pas
 Count=5
@@ -25,11 +25,11 @@ EditWindowCount=1
 [C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuranzo-Website\UnitMain.pas]
 ModuleType=TSourceModule
 
-[default.htm]
-ModuleType=TURLModule
-
 [C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuranzo-Website\Acuranzo.css]
 ModuleType=TSourceModule
+
+[default.htm]
+ModuleType=TURLModule
 
 [C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuranzo-Website\Acuranzo.html]
 ModuleType=TSourceModule
@@ -81,9 +81,9 @@ WelcomePageURL=bds:/default.htm
 [View1]
 CustomEditViewType=TEditView
 Module=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuranzo-Website\UnitMain.pas
-CursorX=5
-CursorY=211
-TopLine=191
+CursorX=96
+CursorY=455
+TopLine=417
 LeftCol=1
 Elisions=
 Bookmarks=
@@ -92,9 +92,9 @@ EditViewName=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuran
 [View2]
 CustomEditViewType=TEditView
 Module=C:\Users\Andrew Simard\Documents\Embarcadero\Studio\Projects\Acuranzo-Website\Acuranzo.css
-CursorX=16
-CursorY=139
-TopLine=85
+CursorX=27
+CursorY=229
+TopLine=185
 LeftCol=1
 Elisions=
 Bookmarks=

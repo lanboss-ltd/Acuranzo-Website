@@ -433,7 +433,7 @@ begin
       popup.style.setProperty('width','45%');
       popup.style.setProperty('height','45%');
       popup.style.setProperty('z-index',10 + this.APP_Popups);
-      popup.innerHTML = "<div><iframe src='"+URL+"'></iframe></div>";
+      popup.innerHTML = "<div class='popup-holder'></div>";
 
       var popmenu = document.createElement('div');
       popmenu.id = "popupP-"+this.APP_Popups;
@@ -458,8 +458,10 @@ begin
       popmenu.appendChild(popmenuX);
       popmenu.appendChild(popmenuM);
 
-      popup.firstElementChild.firstElementChild.style.setProperty('border-radius', rounding);
-
+      popup.firstElementChild.style.setProperty('border-radius', rounding, 'important');
+      await window.sleep(100);
+      popup.firstElementChild.innerHTML = "<iframe src='"+URL+"'></iframe>";
+      popup.firstElementChild.firstElementChild.style.setProperty('border-radius', rounding, 'important');
 
     } else if (this.APP_Mode == "Tab") {
       window.open(URL, "_blank");
