@@ -5,7 +5,7 @@ This repository contains the public-facing https://www.acuranzo.com website code
 [![Count Lines of Code](https://github.com/lanboss-ltd/Acuranzo-Website/actions/workflows/main.yml/badge.svg)](https://github.com/lanboss-ltd/Acuranzo-Website/actions/workflows/main.yml)
 <!--CLOC-START -->
 ```
-Last updated at 2025-04-28 06:51:04 UTC
+Last updated at 2025-04-28 06:51:28 UTC
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
@@ -21,13 +21,13 @@ Markdown                         1              2              2             36
 -------------------------------------------------------------------------------
 SUM:                            23            274            466           3231
 -------------------------------------------------------------------------------
-196 Files were skipped (duplicate, binary, or without source code):
+197 Files were skipped (duplicate, binary, or without source code):
   png: 174
   ico: 7
   html: 4
+  json: 3
   css: 2
   js: 2
-  json: 2
   cname: 1
   dproj: 1
   dsk: 1
