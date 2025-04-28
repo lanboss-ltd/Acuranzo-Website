@@ -376,11 +376,14 @@ begin
 
     if (demo.Options) {
       if (demo.Options["B: Banner Message"] === true)  { Config += "B"; }
+      if (demo.Options["C: Code Snippet"] === true)    { Config += "C"; }
       if (demo.Options["D: Demo Mode"] === true)       { Config += "D"; }
       if (demo.Options["E: Engine Name"] === true)     { Config += "E"; }
       if (demo.Options["F: Font Size"] === true)       { Config += "F"; }
+      if (demo.Options["G: Gallery"] === true)         { Config += "G"; }
       if (demo.Options["H: History"] === true)         { Config += "H"; }
       if (demo.Options["I: Icon"] === true)            { Config += "I"; }
+      if (demo.Options["L: Library"] === true)         { Config += "L"; }
       if (demo.Options["M: Model Switcher"] === true)  { Config += "M"; }
       if (demo.Options["N: Model Name"] === true)      { Config += "N"; }
       if (demo.Options["O: Octopus"] === true)         { Config += "O"; }
