@@ -1,1 +1,59 @@
-{}
+{
+  "bank": {
+    "customers": [
+      {
+        "customer_id": "C001",
+        "name": "John Doe",
+        "email": "john.doe@example.com",
+        "accounts": [
+          {
+            "account_id": "A001",
+            "account_type": "checking", // e.g., checking, savings, credit
+            "balance": 1500.75, // Current balance, updated with all transactions
+            "currency": "USD",
+            "opening_balance": 0.00, // Balance at account creation
+            "opening_date": "2024-01-01T00:00:00Z", // Account creation date
+            "status": "active", // e.g., active, closed
+            "statement_cycle": "15-14", // Defines period (e.g., 15th to 14th)
+            "transactions": [
+              {
+                "transaction_id": "T001",
+                "type": "statement_start",
+                "amount": 700.25, // Balance at period start
+                "date": "2025-04-15T00:00:00Z",
+                "description": "Statement start for 2025-04-15 to 2025-05-14",
+                "statement_period": "2025-04-15_2025-05-14" // Unique period ID
+              },
+              {
+                "transaction_id": "T002",
+                "type": "credit",
+                "amount": 1000.00,
+                "date": "2025-04-28T09:00:00Z",
+                "description": "Salary deposit",
+                "category": "income",
+                "statement_period": "2025-04-15_2025-05-14"
+              },
+              {
+                "transaction_id": "T003",
+                "type": "debit",
+                "amount": 200.50,
+                "date": "2025-04-29T10:30:00Z",
+                "description": "Grocery purchase",
+                "category": "expense",
+                "statement_period": "2025-04-15_2025-05-14"
+              },
+              {
+                "transaction_id": "T004",
+                "type": "statement_end",
+                "amount": 1500.75, // Balance at period end
+                "date": "2025-05-14T23:59:59Z",
+                "description": "Statement end for 2025-04-15 to 2025-05-14",
+                "statement_period": "2025-04-15_2025-05-14"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
