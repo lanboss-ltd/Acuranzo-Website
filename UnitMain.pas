@@ -528,7 +528,7 @@ var
   ConnWait: Integer;
 begin
   // Load up Basic info from the server
-  ResponseString := await(JSONRequest('ISystemService.Info',[APP_Timezone], ''));
+  ResponseString := await(JSONRequest('ISystemService.Info',['Demo', APP_Timezone], ''));
 
   {$IFNDEF WIN32 } asm {
     var data = JSON.parse(ResponseString);
@@ -655,7 +655,7 @@ begin
   APP_LTI_URL := '';
 
   {$IFNDEF WIN32 } asm {
-    this.APP_Timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    this.APP_Timezone = Intl.DateTimeFormat().resolvedOptions().timeZone || 'UTC';
   } end; {$ENDIF}
   edtTimezone.Text := APP_Timezone;
 
