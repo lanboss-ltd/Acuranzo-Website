@@ -1,5 +1,9 @@
 # Acuranzo-Website
-This repository contains the public-facing https://www.acuranzo.com website code. This has been developed with TMS WEB Core. It is intended as a relatively simple portal site - a gateway to the rest of the Acuranzo suite of products and services. 
+This repository contains the public-facing https://www.acuranzo.com websitee. This has been developed with TMS WEB Core. It is intended as a relatively simple portal site - a gateway to the rest of the Acuranzo suite of products and services. 
+
+This was recently updated to provide the "demo" page (aka The Menu) for the Lanboss website, with accommodations made to have it presented within an <iframe> element. The left sidebar, for example, is hidden in that instance.
+
+Note that the JSON configuration file is used to provide the server connection info. For the purposes of the demo site, the "info" from the server is used to determine which models are part of the demo, and populates the UI accordingly.
 
 ## Repository Information
 [![Count Lines of Code](https://github.com/lanboss-ltd/Acuranzo-Website/actions/workflows/main.yml/badge.svg)](https://github.com/lanboss-ltd/Acuranzo-Website/actions/workflows/main.yml)
