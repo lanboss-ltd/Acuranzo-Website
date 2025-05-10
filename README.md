@@ -9,7 +9,7 @@ Note that the JSON configuration file is used to provide the server connection i
 [![Count Lines of Code](https://github.com/lanboss-ltd/Acuranzo-Website/actions/workflows/main.yml/badge.svg)](https://github.com/lanboss-ltd/Acuranzo-Website/actions/workflows/main.yml)
 <!--CLOC-START -->
 ```
-Last updated at 2025-05-01 01:04:09 UTC
+Last updated at 2025-05-10 05:02:04 UTC
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
@@ -19,24 +19,24 @@ CSS                              1             30             35            407
 JSON                             8              0              0            310
 HTML                             3             27             20            158
 XML                              1              0              0            120
-JavaScript                       4              6              0             95
+JavaScript                       3              6              0             94
 YAML                             2             15             23             72
-Markdown                         1              2              2             36
+Markdown                         1              4              2             38
 -------------------------------------------------------------------------------
-SUM:                            25            274            469           3291
+SUM:                            24            276            469           3292
 -------------------------------------------------------------------------------
-195 Files were skipped (duplicate, binary, or without source code):
+196 Files were skipped (duplicate, binary, or without source code):
   png: 174
   ico: 7
   html: 4
   css: 2
+  js: 2
   json: 2
   cname: 1
   dproj: 1
   dsk: 1
   gitignore: 1
   identcache: 1
-  js: 1
 ```
 <!--CLOC-END-->
 
