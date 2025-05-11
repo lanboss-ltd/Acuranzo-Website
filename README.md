@@ -9,13 +9,14 @@ Note that the JSON configuration file is used to provide the server connection i
 [![Count Lines of Code](https://github.com/lanboss-ltd/Acuranzo-Website/actions/workflows/main.yml/badge.svg)](https://github.com/lanboss-ltd/Acuranzo-Website/actions/workflows/main.yml)
 <!--CLOC-START -->
 ```
-Last updated at 2025-05-10 05:02:04 UTC
+Last updated at 2025-05-11 05:56:54 UTC
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
 Delphi Form                      2              2              0           1478
 Pascal                           3            192            389            615
 CSS                              1             30             35            407
+Bourne Shell                     1             81             47            365
 JSON                             8              0              0            310
 HTML                             3             27             20            158
 XML                              1              0              0            120
@@ -23,7 +24,7 @@ JavaScript                       3              6              0             94
 YAML                             2             15             23             72
 Markdown                         1              4              2             38
 -------------------------------------------------------------------------------
-SUM:                            24            276            469           3292
+SUM:                            25            357            516           3657
 -------------------------------------------------------------------------------
 196 Files were skipped (duplicate, binary, or without source code):
   png: 174
