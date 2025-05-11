@@ -5,6 +5,9 @@ This was recently updated to provide the "demo" page (aka The Menu) for the Lanb
 
 Note that the JSON configuration file is used to provide the server connection info. For the purposes of the demo site, the "info" from the server is used to determine which models are part of the demo, and populates the UI accordingly.
 
+## Sample Data
+A new data generation script has been added. This is a new command-line tool (Bash script) designed to create sample data of all kinds. Sample phone bills. Sample bank statements. That sort of thing. It reads in a configuration file that describes the JSON schema and various variables and iterators, and then generates an output JSON file that contains the sample data. More details will be available soon, but this is what is used to generate the sample data for the models to use.
+
 ## Repository Information
 [![Count Lines of Code](https://github.com/lanboss-ltd/Acuranzo-Website/actions/workflows/main.yml/badge.svg)](https://github.com/lanboss-ltd/Acuranzo-Website/actions/workflows/main.yml)
 <!--CLOC-START -->
