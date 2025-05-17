@@ -14,7 +14,7 @@ A new data generation script has been added. This is a new command-line tool (Ba
 [![Count Lines of Code](https://github.com/lanboss-ltd/Acuranzo-Website/actions/workflows/main.yml/badge.svg)](https://github.com/lanboss-ltd/Acuranzo-Website/actions/workflows/main.yml)
 <!--CLOC-START -->
 ```
-Last updated at 2025-05-11 05:59:09 UTC
+Last updated at 2025-05-17 08:51:05 UTC
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
@@ -27,9 +27,9 @@ HTML                             3             27             20            158
 XML                              1              0              0            120
 JavaScript                       3              6              0             94
 YAML                             2             15             23             72
-Markdown                         1              5              2             41
+Markdown                         1              5              2             43
 -------------------------------------------------------------------------------
-SUM:                            25            358            516           3660
+SUM:                            25            358            516           3662
 -------------------------------------------------------------------------------
 196 Files were skipped (duplicate, binary, or without source code):
   png: 174
