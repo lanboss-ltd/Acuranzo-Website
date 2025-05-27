@@ -14,35 +14,35 @@ A new data generation script has been added. This is a new command-line tool (Ba
 [![Count Lines of Code](https://github.com/lanboss-ltd/Acuranzo-Website/actions/workflows/main.yml/badge.svg)](https://github.com/lanboss-ltd/Acuranzo-Website/actions/workflows/main.yml)
 <!--CLOC-START -->
 ```
-Last updated at 2025-05-17 08:51:05 UTC
+Last updated at 2025-05-27 18:59:33 UTC
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
 Delphi Form                      2              2              0           1478
-Pascal                           3            192            389            615
+Pascal                           3            192            391            613
 CSS                              1             30             35            407
 Bourne Shell                     1             81             47            365
 JSON                             8              0              0            310
 HTML                             3             27             20            158
 XML                              1              0              0            120
-JavaScript                       3              6              0             94
+JavaScript                       4              6              0             95
 YAML                             2             15             23             72
 Markdown                         1              5              2             43
 -------------------------------------------------------------------------------
-SUM:                            25            358            516           3662
+SUM:                            26            358            518           3661
 -------------------------------------------------------------------------------
-196 Files were skipped (duplicate, binary, or without source code):
+195 Files were skipped (duplicate, binary, or without source code):
   png: 174
   ico: 7
   html: 4
   css: 2
-  js: 2
   json: 2
   cname: 1
   dproj: 1
   dsk: 1
   gitignore: 1
   identcache: 1
+  js: 1
 ```
 <!--CLOC-END-->
 
