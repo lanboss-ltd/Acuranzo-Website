@@ -542,15 +542,15 @@ begin
         Lookups[lnumber] = [];
       } else {
         // Try and convert any collection content into actual JSON
-        for (var i = 0; i < Lookups[lnumber].length; i++) {
-          if (Lookups[lnumber][i].collection) {
-            try {
-              var jsonstring = decodeURIComponent(Lookups[lnumber][i].collection);
-              Lookups[lnumber][i].collection = JSON.parse(jsonstring);
-            } catch {
-            }
-          }
-        }
+//        for (var i = 0; i < Lookups[lnumber].length; i++) {
+//          if (Lookups[lnumber][i].collection) {
+//            try {
+//              var jsonstring = decodeURIComponent(Lookups[lnumber][i].collection);
+//              Lookups[lnumber][i].collection = JSON.parse(jsonstring);
+//            } catch {
+//            }
+//          }
+//        }
       }
     }
 
